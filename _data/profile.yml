@@ -23,10 +23,10 @@ github: MikeFu0217
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    He is a first-year Master's student in Electrical and Computer Engineering at Cornell University, supervised by <a href="https://alian.csl.cornell.edu" target="_blank">Mohammad Alian</a>. His current research focuses on Computer Architecture Design and AI Systems.
+    He is a first-year Master's student in Electrical and Computer Engineering at Cornell University supervised by <a href="https://alian.csl.cornell.edu" target="_blank">Mohammad Alian</a>. His current research focuses on AI for computer systems.
   </p>
   <p>
-    He completed his undergraduate studies in Biomedical Engineering at Huazhong University of Science and Technology (HUST), where he explored AI applications for healthcare.
+    He completed his undergraduate studies in Biomedical Engineering at Huazhong University of Science and Technology (HUST), with reseach experiences on AI for health.
   </p>
 
 portrait_url: /assets/images/photos/selfie.jpeg
@@ -36,7 +36,7 @@ portrait_caption: >-
 education:
 - name: Cornell University
   logo: /assets/images/badges/Cornell_seal.png
-  position: Master's in Electrical and Computer Engineering 
+  position: Master's in Electrical and Computer Engineering
   date: Sep. 2024 - present
 - name: Huazhong University of Science and Technology
   logo: /assets/images/badges/Hustseal.png
