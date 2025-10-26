@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Zuoming Fu">
+    
+    <!-- Completely eliminate flash of wrong theme -->
+    <script>
+        (function() {
+            const THEME_KEY = "REDEFINE-THEME-STATUS";
+            const DARK = "dark", LIGHT = "light";
+            
+            // Get preferred theme
+            function getTheme() {
+                try {
+                    const saved = localStorage.getItem(THEME_KEY);
+                    if (saved) {
+                        const { isDark } = JSON.parse(saved);
+                        return isDark ? DARK : LIGHT;
+                    }
+                } catch (e) {}
+                
+                return matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+            }
+            
+            // Apply theme to document
+            function applyTheme(theme) {
+                const isDark = theme === DARK;
+                const root = document.documentElement;
+                
+                // Set data attribute for CSS variables
+                root.setAttribute("data-theme", theme);
+                
+                // Set classes for compatibility
+                root.classList.add(theme);
+                root.classList.remove(isDark ? LIGHT : DARK);
+                root.style.colorScheme = theme;
+            }
+            
+            // Initial application
+            const theme = getTheme();
+            applyTheme(theme);
+            
+            // Listen for system preference changes
+            matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+                // Only update if using system preference (no localStorage entry)
+                if (!localStorage.getItem(THEME_KEY)) {
+                    applyTheme(matches ? DARK : LIGHT);
+                }
+            });
+            
+            // Set body classes once DOM is ready
+            if (document.readyState !== "loading") {
+                document.body.classList.add(theme + "-mode");
+            } else {
+                document.addEventListener("DOMContentLoaded", () => {
+                    document.body.classList.add(theme + "-mode");
+                    document.body.classList.remove((theme === DARK ? LIGHT : DARK) + "-mode");
+                });
+            }
+        })();
+    </script>
+    
+    <!-- Critical CSS to prevent flash -->
+    <style>
+        :root[data-theme="dark"] {
+            --background-color: #202124;
+            --background-color-transparent: rgba(32, 33, 36, 0.6);
+            --second-background-color: #2d2e32;
+            --third-background-color: #34353a;
+            --third-background-color-transparent: rgba(32, 33, 36, 0.6);
+            --primary-color: #0066CC;
+            --first-text-color: #ffffff;
+            --second-text-color: #eeeeee;
+            --third-text-color: #bebec6;
+            --fourth-text-color: #999999;
+            --default-text-color: #bebec6;
+            --invert-text-color: #373D3F;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --selection-color: #0066CC;
+            --shadow-color-1: rgba(255, 255, 255, 0.08);
+            --shadow-color-2: rgba(255, 255, 255, 0.05);
+        }
+        
+        :root[data-theme="light"] {
+            --background-color: #fff;
+            --background-color-transparent: rgba(255, 255, 255, 0.6);
+            --second-background-color: #f8f8f8;
+            --third-background-color: #f2f2f2;
+            --third-background-color-transparent: rgba(241, 241, 241, 0.6);
+            --primary-color: #0066CC;
+            --first-text-color: #16171a;
+            --second-text-color: #2f3037;
+            --third-text-color: #5e5e5e;
+            --fourth-text-color: #eeeeee;
+            --default-text-color: #373D3F;
+            --invert-text-color: #bebec6;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --selection-color: #0066CC;
+            --shadow-color-1: rgba(0, 0, 0, 0.08);
+            --shadow-color-2: rgba(0, 0, 0, 0.05);
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--default-text-color);
+        }
+        
+        /* Apply body classes as soon as DOM is ready */
+        :root[data-theme="dark"] body {
+            background-color: var(--background-color);
+            color: var(--default-text-color);
+        }
+    </style>
+    
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://mikefu0217.github.io/2025/05/26/ai-synth-cornell/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI-Powered Digital Synthesizer">
+<meta property="og:url" content="https://mikefu0217.github.io/2025/05/26/ai-synth-cornell/index.html">
+<meta property="og:site_name" content="Zuoming&#39;s Website">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://mikefu0217.github.io/images/redefine-og.webp">
+<meta property="article:published_time" content="2025-05-25T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-10-26T09:34:59.039Z">
+<meta property="article:author" content="Zuoming Fu">
+<meta property="article:tag" content="LLM">
+<meta property="article:tag" content="EDM">
+<meta property="article:tag" content="music">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mikefu0217.github.io/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/icons/dory.jpg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/dory.jpg">
+    <meta name="theme-color" content="#7BC8F8">
+    <link rel="shortcut icon" href="/images/icons/dory.jpg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            AI-Powered Digital Synthesizer | Zuoming&#39;s Homepage
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"mikefu0217.github.io","root":"/","language":"en"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#7BC8F8","secondary":null,"default_mode":"dark"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":false,"site_pv":false,"site_uv":false,"post_pv":false},"single_page":true,"preloader":{"enable":false,"custom_message":null},"side_tools":{"gear_rotation":true,"auto_expand":true},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallpapers/ldjjInk.webp","dark":"/images/wallpapers/hutao1.webp"},"title":"Welcome to Zuoming's Homepage","subtitle":{"text":["Projects","Papers","Blogs","Sharings"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#F39B17","dark":"#d1d1b6"},"text_style":{"title_size":"3.2rem","subtitle_size":"1.8rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":"https://github.com/MikeFu0217","instagram":null,"zhihu":null,"twitter":null,"email":"1920274083@qq.com"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.5","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2025/2/17 23:59:59"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Zuoming&#39;s Homepage
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">4</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			
+			
+			<img src="/images/posts/ai-synth-cornell/synth.png" alt="AI-Powered Digital Synthesizer" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			
+			<div class="w-full flex items-center absolute bottom-0 justify-start">
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">AI-Powered Digital Synthesizer</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/images/icons/dory.jpg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">Zuoming Fu</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv1</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-05-26</span>
+        <span class="mobile">2025-05-26</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-10-26 17:34:59</span>
+            <span class="mobile">2025-10-26 17:34:59</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/project/">project</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/LLM/">LLM</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/EDM/">EDM</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/music/">music</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<div align="center">
+    <h1>AI-Powered Digital Synthesizer</h1>
+</div>
+<div align="center">
+    <p style="font-size: 24px;">AI for Sound Design on Raspberry Pi</p>
+</div>
+
+<div align="center">
+    Authors: Zuoming Fu (zf242), Muyang Li (ml2855)
+</div>
+
+<div align="center">
+    <a class="link"   href="https://www.youtube.com/watch?v=et91Gea6CPk"  target="_blank">Demo video<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>
+</div>
+<div align="center">
+    <a class="link"   href="https://github.com/MikeFu0217/synth/tree/main?tab=readme-ov-file"  target="_blank">Github Repository<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>
+</div>
+
+<hr>
+<h2 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h2><ul>
+<li><a href="#Objective">Objective</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#Detailed-Goals">Detailed Goals</a></li>
+<li><a href="#design--implementation">Design &amp; Implementation</a></li>
+<li><a href="#code-structure">Code Structure</a></li>
+<li><a href="#modules">Modules</a></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="#results">Results</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#future-work">Future Work</a></li>
+<li><a href="#team-contributions">Team Contributions</a></li>
+<li><a href="#parts-list">Parts List</a></li>
+<li><a href="#references">References</a></li>
+<li><a href="#code-appendix">Code Appendix</a></li>
+</ul>
+<hr>
+<h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>In this Project, we aim to design a real-time digital synthesizer with an AI Agent embedded using an Raspberry pi 4. The digital synthesizer can generate sound with envelope, filter, and reverb effects, just like a real keyboard. The AI Agent can communicate with the user through voice, and generate the sound preset the user specifies. For more convenienct manipulation, a PiTFT display, GPIO buttons, and a potentiometer knob with an ADC are connected to the Raspberry pi, giving users an intuitive and easy-to-start with experience.</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><blockquote>
+<p>AI-Powered Digital Synthesizer on <a class="link"   target="_blank" rel="noopener" href="https://www.raspberrypi.com/products/raspberry-pi-4-model-b/" >Raspberry Pi 4<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> lets users design sound in a way that they have never experienced before. Users can choose either to tune the parameters using parameter selection buttons themselves, or enter AI mode to have a conversation with our AI Agent and ask it to generate the sound.</p>
+</blockquote>
+<blockquote>
+<p>For software, it is a Python-based real-time sound synthesizer with a built-in LLM Agent. The digital synthesizer supports three channels of waves: saw, sine, and square. Each channel has an envelope, a filter, and a reverb with 15 tunable parameters in total. PiTFT is supported for displaying and selecting parameters and displaying waveform style, envelope curve, and filter percentages. Under AI mode, particle system display as an AI assistant is supported. In the meantime, real-time playback recording is supported by tracking system sound frames.</p>
+</blockquote>
+<blockquote>
+<p>As for hardware, we included 6 GPIO-connected buttons, an <a class="link"   target="_blank" rel="noopener" href="https://cdn-shop.adafruit.com/datasheets/ads1115.pdf" >ADS1115<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> ADC, and a <a class="link"   target="_blank" rel="noopener" href="https://www.ttelectronics.com/TTElectronics/media/ProductFiles/Datasheet/P160.pdf" >P160 Panel Potentiometer<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. The GPIO buttons function include: 1 for sound play key, 1 for channel selection, 2 for parameter selection, 1 for AI mode entering&#x2F;exiting, and 1 for playback control. The potentiometer knob is connected to ADS1115 and then to the Pi4, using the <a class="link"   target="_blank" rel="noopener" href="https://github.com/adafruit/Adafruit_Blinka" >Adafruit_Blinka<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> Python library we can read voltage from the knob in real time.</p>
+</blockquote>
+<div align="center">
+  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/posts/ai-synth-cornell/synth.png"
+                      width="600"
+                >
+  <p style="margin-top:10px; font-size:16px;">Fig1. Our AI Powered Digital Synthesizer</p>
+</div>
+
+<hr>
+<h2 id="Detailed-Goals"><a href="#Detailed-Goals" class="headerlink" title="Detailed Goals"></a>Detailed Goals</h2><ul>
+<li><p><strong>The Digital Synthesizer</strong></p>
+<ul>
+<li><code>Wave generator</code>: Generates basic waveforms including saw, sine and square. This forms the core sound generation engine of the synthesizer.</li>
+<li><code>Envelope</code>: Controls how a sound evolves over time using ADSR (Attack, Decay, Sustain, Release) parameters. This shapes the loudness and character of each note, making it expressive and dynamic.</li>
+<li><code>Filter</code>: Processes the waveform to emphasize or attenuate certain frequency ranges. Typical filters include low-pass, high-pass, band-pass, and notch.</li>
+<li><code>Reverb</code>: Simulates the effect of sound reflecting in a physical space. This adds depth and spatiality to the sound, making it feel more natural or ambient.</li>
+<li><code>Multi-Channel</code>: Supports multiple simultaneous voices or instruments. This allows for polyphony (playing multiple notes at once) and layering of different sounds or effects on different channels.</li>
+<li><code>Playback</code>: Includes functionality for recording, storing, and playing back sequences or performances. Useful for composing loops or playing backing tracks.</li>
+<li><code>Real-time Processing</code>: ADSR Envelope is in a real-time manner, making the key-press the same as a real digital keyboard. Filter is also real-time, and tuning the filter while playing is possible, just like a DJ set.</li>
+</ul>
+</li>
+<li><p><strong>The AI Sound Generator</strong></p>
+<ul>
+<li><code>Voice to text (VTT)</code>: Captures and transcribes user voice commands using tools like Vosk and Whisper. It acts as the front-end for hands-free control.</li>
+<li><code>LLM Agent</code>: Connects the text to a powerful large language model (e.g., gpt-4o) via an API, with carefully designed prompts. This module interprets natural language commands and translates them into synthesizer control actions.</li>
+<li><code>Text to Voice (TTV)</code>: Converts AI-generated messages to speech and plays them to the user, making the AI system conversation-like.</li>
+</ul>
+</li>
+<li><p><strong>The PiTFT Displayer</strong></p>
+<ul>
+<li><code>Parameter display</code>: Displays channels, waveform name, envelope, filter, and reverb parameters in a matrix format.</li>
+<li><code>Waveform display</code>: Displays the corresponding waveform shape when a certain waveform is selected.</li>
+<li><code>ADSR envelope display</code>: Displays a 4-stage curve line, with curve height dynamically related to ADSR values.</li>
+<li><code>AI Sphere</code>: Displays a dynamic circle with particles similar to Apple Siri, changing shapes under listening&#x2F;speaking.</li>
+</ul>
+</li>
+</ul>
+<div align="center">
+  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/posts/ai-synth-cornell/display.png"
+                      width="600"
+                >
+  <p style="margin-top:10px; font-size:16px;">Fig2. The PiTFT Screen Display with parameter and waveform, ADSR, and Filter graphics</p>
+</div>
+
+
+<hr>
+<h2 id="Design-Implementation"><a href="#Design-Implementation" class="headerlink" title="Design &amp; Implementation"></a>Design &amp; Implementation</h2><ol>
+<li><strong>Software System Flow</strong><blockquote>
+<p>Our software system promarily consists of two parts, the main loop, and an AI loop. The main loop is the main control flow in where sound and display are generated, and where all GPIO callbacks are handled. The AI loop is an system event that can be triggered using one of the GPIO callbacks.</p>
+</blockquote>
+</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/posts/ai-synth-cornell/main_flow.png"
+                      alt="MainFlow"
+                ></p>
+<div align="center">
+  <p style="margin-top:10px; font-size:16px;">Fig3. The Software System Flow Chart</p>
+</div>
+
+<ol start="2">
+<li><p><strong>Key Technical Details</strong>  </p>
+<ul>
+<li><p><strong>Real‑time sound triggering</strong>:<br>Hardware events on GPIO‑17 (note key) are connected directly to the synthesis engine. It controls the <code>note_on()</code> and <code>note_off()</code> of the sound’s envelopes to turn on and off the noise.</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># main.py   ––  hardware interrupt</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">GPIO17_callback</span>(<span class="params">channel</span>):</span><br><span class="line">    <span class="keyword">if</span> GPIO.<span class="built_in">input</span>(<span class="number">17</span>) == GPIO.LOW:       <span class="comment"># key pressed</span></span><br><span class="line">        sound.note_on()                  <span class="comment"># start envelope</span></span><br><span class="line">    <span class="keyword">else</span>:                                <span class="comment"># key released</span></span><br><span class="line">        sound.note_off()                 <span class="comment"># release envelope</span></span><br><span class="line">GPIO.add_event_detect(<span class="number">17</span>, GPIO.BOTH,</span><br><span class="line">                      callback=GPIO17_callback,</span><br><span class="line">                      bouncetime=<span class="number">5</span>)</span><br><span class="line">```  </span><br><span class="line">The **audio thread** <span class="keyword">is</span> opened during the entire main loop <span class="keyword">and</span> remains hot <span class="keyword">for</span> the lifetime of the program:  </span><br><span class="line">```python</span><br><span class="line"><span class="keyword">with</span> sd.OutputStream(samplerate=SAMPLE_RATE,</span><br><span class="line">                     channels=<span class="number">1</span>,</span><br><span class="line">                     dtype=<span class="string">&quot;float32&quot;</span>,</span><br><span class="line">                     callback=audio_callback):</span><br><span class="line">    run_main_loop()          <span class="comment"># GUI, GPIO, AI, etc.</span></span><br><span class="line">```  </span><br><span class="line">During every audio block the callback mixes the current sample block produced by our sound engine:  </span><br><span class="line">```python</span><br><span class="line"><span class="comment"># main.py   ––  audio callback</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">audio_callback</span>(<span class="params">outdata, frames, time_info, status</span>):</span><br><span class="line">    sig = sound.process(frames)          <span class="comment"># ← pulls from every channel</span></span><br><span class="line">    outdata[:, <span class="number">0</span>] = np.clip(sig, -<span class="number">1.0</span>, <span class="number">1.0</span>)</span><br><span class="line">```  </span><br><span class="line">`sound.process()` iterates over <span class="built_in">all</span> active **Channel** objects <span class="keyword">and</span>, <span class="keyword">for</span> each, calls its envelope‐aware `process()` to obtain a band‑limited waveform whose amplitude <span class="keyword">is</span> shaped by ADSR. Because the GPIO ISR switches the envelope’s state variables immediately, the very <span class="built_in">next</span> audio block reflects the new amplitude curve, giving sub‑millisecond “feel”:</span><br><span class="line">```python</span><br><span class="line"><span class="comment"># channel.py   ––  Channel.process()</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">process</span>(<span class="params">self, frames</span>):</span><br><span class="line">    ar = np.arange(frames)</span><br><span class="line">    idx = (<span class="variable language_">self</span>.phase + ar) % <span class="variable language_">self</span>.waveform.length</span><br><span class="line">    sig = <span class="variable language_">self</span>.waveform.data[idx].copy()</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">for</span> env <span class="keyword">in</span> <span class="variable language_">self</span>.envelopes:</span><br><span class="line">        sig *= env.process(frames)  <span class="comment"># Apply ADSR envelope</span></span><br><span class="line">    <span class="keyword">for</span> fl <span class="keyword">in</span> <span class="variable language_">self</span>.filters:</span><br><span class="line">        sig = fl.apply(sig)  <span class="comment"># Apply filters</span></span><br><span class="line">    <span class="keyword">for</span> rv <span class="keyword">in</span> <span class="variable language_">self</span>.reverbs:</span><br><span class="line">        sig = rv.apply(sig)  <span class="comment"># Apply reverbs</span></span><br><span class="line"></span><br><span class="line">    sig *= <span class="variable language_">self</span>.volume</span><br><span class="line">    <span class="variable language_">self</span>.phase = (<span class="variable language_">self</span>.phase + frames) % <span class="variable language_">self</span>.waveform.length</span><br><span class="line">    <span class="keyword">return</span> sig</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>Real-time Enveloping</strong>:<br>Implemented in <strong>channel.py</strong>’s <code>Envelope</code> class. Each voice’s ADSR envelope parameters are stored and updated per-sample in <code>process()</code>.  </p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment"># channel.py   ––  Envelope.process()</span></span><br><span class="line">  <span class="keyword">def</span> <span class="title function_">process</span>(<span class="params">self, frames</span>):</span><br><span class="line">      env = np.zeros(frames, dtype=<span class="string">&#x27;float32&#x27;</span>)</span><br><span class="line">      <span class="keyword">if</span> <span class="variable language_">self</span>.state == <span class="string">&#x27;idle&#x27;</span>:</span><br><span class="line">          <span class="keyword">return</span> env</span><br><span class="line">      <span class="variable language_">self</span>.update_samples()  <span class="comment"># ADSR values are updated here according to knob tuning</span></span><br><span class="line">      <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(frames):</span><br><span class="line">          <span class="keyword">if</span> <span class="variable language_">self</span>.state == <span class="string">&#x27;attack&#x27;</span>:  <span class="comment"># As an example of how ADSR progress is recorded</span></span><br><span class="line">              <span class="variable language_">self</span>.progress += <span class="number">1.0</span> / <span class="variable language_">self</span>.a_samps</span><br><span class="line">              <span class="variable language_">self</span>.current_amp = <span class="built_in">min</span>(<span class="variable language_">self</span>.progress, <span class="number">1.0</span>)</span><br><span class="line">              env[i] = <span class="variable language_">self</span>.current_amp</span><br><span class="line">              <span class="keyword">if</span> <span class="variable language_">self</span>.progress &gt;= <span class="number">1.0</span>:</span><br><span class="line">                  <span class="variable language_">self</span>.state = <span class="string">&#x27;decay&#x27;</span></span><br><span class="line">                  <span class="variable language_">self</span>.progress = <span class="number">0.0</span></span><br><span class="line">          <span class="keyword">elif</span> <span class="variable language_">self</span>.state == <span class="string">&#x27;decay&#x27;</span>:</span><br><span class="line">              <span class="comment"># ...</span></span><br><span class="line">          <span class="keyword">elif</span> <span class="variable language_">self</span>.state == <span class="string">&#x27;sustain&#x27;</span>:</span><br><span class="line">              <span class="comment"># ...</span></span><br><span class="line">          <span class="keyword">elif</span> <span class="variable language_">self</span>.state == <span class="string">&#x27;release&#x27;</span>:</span><br><span class="line">              <span class="comment"># ...</span></span><br><span class="line">          <span class="keyword">else</span>:</span><br><span class="line">              env[i] = <span class="number">0.0</span></span><br><span class="line">     <span class="keyword">return</span> env</span><br><span class="line">  ```  </span><br><span class="line">  The per-sample state machine yields smooth, glitch-free amplitude modulation.</span><br><span class="line"></span><br><span class="line">- **Real-time Filtering**:  </span><br><span class="line">  Implemented a simple frequency modulation <span class="built_in">filter</span> <span class="keyword">in</span> **channel.py**’s `Filter` <span class="keyword">class</span>:  </span><br><span class="line">  ```python</span><br><span class="line">  <span class="comment"># channel.py</span></span><br><span class="line">  <span class="keyword">class</span> <span class="title class_">Filter</span>:</span><br><span class="line">      <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">          <span class="comment"># ...</span></span><br><span class="line">      <span class="keyword">def</span> <span class="title function_">apply</span>(<span class="params">self, signal</span>):</span><br><span class="line">         <span class="string">&quot;&quot;&quot;Apply band-specific gains.&quot;&quot;&quot;</span></span><br><span class="line">         fft = np.fft.rfft(signal)</span><br><span class="line">         freqs = np.fft.rfftfreq(<span class="built_in">len</span>(signal), d=<span class="number">1</span>/<span class="variable language_">self</span>.sr)</span><br><span class="line">         fft[freqs &lt; <span class="number">400</span>] *= <span class="variable language_">self</span>.low</span><br><span class="line">         fft[(freqs &gt;= <span class="number">400</span>) &amp; (freqs &lt; <span class="number">4000</span>)] *= <span class="variable language_">self</span>.mid</span><br><span class="line">         fft[freqs &gt;= <span class="number">4000</span>] *= <span class="variable language_">self</span>.high</span><br><span class="line">         <span class="keyword">return</span> np.fft.irfft(fft, n=<span class="built_in">len</span>(signal))</span><br><span class="line">  ```  </span><br><span class="line">  `numpy` provides CPU-fast array processing, making te <span class="built_in">filter</span> of a frame within milliseconds.</span><br><span class="line"></span><br><span class="line">- **AI thread event control <span class="keyword">with</span> GPIO**:  </span><br><span class="line">  GPIO26 <span class="keyword">is</span> reserved to abort the AI sequence <span class="keyword">and</span> <span class="keyword">return</span> to the main loop immediately:  </span><br><span class="line">  ```python</span><br><span class="line">  <span class="comment"># main.py</span></span><br><span class="line">  ai_abort = threading.Event()</span><br><span class="line">  <span class="keyword">def</span> <span class="title function_">GPIO26_callback</span>(<span class="params">_</span>):</span><br><span class="line">      ai_abort.<span class="built_in">set</span>()              <span class="comment"># signal AI thread</span></span><br><span class="line">  <span class="comment"># in AI thread:</span></span><br><span class="line">  <span class="keyword">if</span> ai_abort.is_set():</span><br><span class="line">      ai_abort.clear()</span><br><span class="line">      return_to_main_loop()</span><br><span class="line">  ```  </span><br><span class="line">  This design provides a hard “panic” to exit long LLM calls <span class="keyword">or</span> speech synthesis without waiting, improving UX <span class="keyword">and</span> safety <span class="keyword">in</span> live performance.</span><br><span class="line"></span><br><span class="line">- **AI Mode state machine control**:  </span><br><span class="line">  The AI interaction <span class="keyword">is</span> managed by a finite-state machine <span class="keyword">in</span> **reaction.py**:  </span><br><span class="line">  ```plaintext</span><br><span class="line">  IDLE -&gt; LISTENING -&gt; THINKING -&gt; SPEAKING -&gt; IDLE</span><br><span class="line">  ```  </span><br><span class="line">  Each transition has entry/exit hooks <span class="keyword">and</span> timeouts. This ensures robust handling of partial speech, API delays, <span class="keyword">and</span> guarantees <span class="keyword">return</span> to **IDLE** even on errors.</span><br><span class="line"></span><br><span class="line">- **AI-Sphere effect**:  </span><br><span class="line">  In **view.py**, we add dynamic effects when AI <span class="keyword">is</span> listening/thinking/speaking, just like the `Apple Siri`.</span><br><span class="line"></span><br><span class="line">  ![AI modes](/images/posts/ai-synth-cornell/tls.png)</span><br><span class="line">  &lt;div align=<span class="string">&quot;center&quot;</span>&gt;</span><br><span class="line">  &lt;p style=<span class="string">&quot;margin-top:10px; font-size:16px;&quot;</span>&gt;Fig4. AI-Sphere under AI-Mode&lt;/p&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  A `ParticleSystem` <span class="keyword">and</span> a `Blooming Ball` are designed together to form the vivid `AI Sphere` that adds fun the the AI generating process.</span><br><span class="line"></span><br><span class="line">- **LLM prompting <span class="keyword">and</span> structured output**:  </span><br><span class="line">  To make sure that LLM outputs the exact need parameters without <span class="built_in">any</span> other stuffs, the `System Prompt` embed a strict JSON schema:  </span><br><span class="line">  ```python</span><br><span class="line">     SYSTEM_PROMPT = <span class="string">&quot;&quot;&quot;You are a professional synthesizer sound designer assistant.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">     Your job is: based on a user&#x27;s natural language description of the desired sound characteristics (such as tone, feeling, attack speed, reverb strength, etc.), infer appropriate synthesizer parameters, and generate a full JSON configuration, as follows:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">     - Output an overall &quot;description&quot; field (a short 1-2 sentence natural language description summarizing the intended sound character based on the user&#x27;s input).</span></span><br><span class="line"><span class="string">     - Then output a &quot;channels&quot; field, which is a list of 3 sound channels, each configured as below:</span></span><br><span class="line"><span class="string">     - The first channel must always use waveform &quot;saw&quot;</span></span><br><span class="line"><span class="string">     - The second channel must always use waveform &quot;sin&quot;</span></span><br><span class="line"><span class="string">     - The third channel must always use waveform &quot;sqr&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">     Each channel must contain:</span></span><br><span class="line"><span class="string">     - waveform (name fixed + frequency matching the description if specified)</span></span><br><span class="line"><span class="string">     - envelope (attack_time, decay_time, sustain_level, release_time)</span></span><br><span class="line"><span class="string">     - filter (low, mid, high gain settings)</span></span><br><span class="line"><span class="string">     - reverb (decay, delay, wet)</span></span><br><span class="line"><span class="string">     - volume</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">     The range of each parameter is as follows:</span></span><br><span class="line"><span class="string">     - attack_time: 0.0 to 1.0</span></span><br><span class="line"><span class="string">     - decay_time: 0.0 to 1.0</span></span><br><span class="line"><span class="string">     - sustain_level: 0.0 to 1.0</span></span><br><span class="line"><span class="string">     - release_time: 0.0 to 1.0</span></span><br><span class="line"><span class="string">     - low: 0.0 to 1.0</span></span><br><span class="line"><span class="string">     - mid: 0.0 to 1.0</span></span><br><span class="line"><span class="string">     - high: 0.0 to 1.0</span></span><br><span class="line"><span class="string">     - decay: 0.0 to 1.0</span></span><br><span class="line"><span class="string">     - delay: 0.0 to 0.2</span></span><br><span class="line"><span class="string">     - wet: 0.0 to 1.0</span></span><br><span class="line"><span class="string">     - volume: 0.0 to 1.0</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">     If the user specifies tone (e.g., &quot;punchy&quot;, &quot;smooth&quot;, &quot;ambient&quot;), modify attack, decay, reverb, and volume accordingly to match the feel.</span></span><br><span class="line"><span class="string">     If the user specifies a frequency, apply it uniformly across all channels unless otherwise indicated.</span></span><br><span class="line"><span class="string">     If the user implies to that the parameter is right and want exit, set exit to 1, oherwise set it to 0.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">     Notice:</span></span><br><span class="line"><span class="string">     - The input of user is retrieved from a microphone, so the text may be inaccurate. Please notice this and try get the user&#x27;s meaning as much as you can.</span></span><br><span class="line"><span class="string">     - You are able to set different parameters for saw, sin and sqr waveforms. Just do your best to make the sound as close to the user&#x27;s description as possible.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">     Example structure:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">     &#123;</span></span><br><span class="line"><span class="string">     &quot;exit&quot;: 0,</span></span><br><span class="line"><span class="string">     &quot;description&quot;: &quot;A punchy and ambient preset with fast attack and rich reverb, suitable for energetic leads.&quot;,</span></span><br><span class="line"><span class="string">     &quot;channels&quot;: [</span></span><br><span class="line"><span class="string">         &#123;</span></span><br><span class="line"><span class="string">         &quot;waveform&quot;: &#123;</span></span><br><span class="line"><span class="string">             &quot;name&quot;: &quot;saw&quot;,</span></span><br><span class="line"><span class="string">             &quot;frequency&quot;: 440.0</span></span><br><span class="line"><span class="string">         &#125;,</span></span><br><span class="line"><span class="string">         &quot;envelope&quot;: &#123;</span></span><br><span class="line"><span class="string">             &quot;attack_time&quot;: 0.1,</span></span><br><span class="line"><span class="string">             &quot;decay_time&quot;: 0.3,</span></span><br><span class="line"><span class="string">             &quot;sustain_level&quot;: 0.7,</span></span><br><span class="line"><span class="string">             &quot;release_time&quot;: 0.4</span></span><br><span class="line"><span class="string">         &#125;,</span></span><br><span class="line"><span class="string">         &quot;filter&quot;: &#123;</span></span><br><span class="line"><span class="string">             &quot;low&quot;: 1.0,</span></span><br><span class="line"><span class="string">             &quot;mid&quot;: 0.8,</span></span><br><span class="line"><span class="string">             &quot;high&quot;: 1.2</span></span><br><span class="line"><span class="string">         &#125;,</span></span><br><span class="line"><span class="string">         &quot;reverb&quot;: &#123;</span></span><br><span class="line"><span class="string">             &quot;decay&quot;: 0.5,</span></span><br><span class="line"><span class="string">             &quot;delay&quot;: 0.1,</span></span><br><span class="line"><span class="string">             &quot;wet&quot;: 0.3</span></span><br><span class="line"><span class="string">         &#125;,</span></span><br><span class="line"><span class="string">         &quot;volume&quot;: 0.8</span></span><br><span class="line"><span class="string">         &#125;,</span></span><br><span class="line"><span class="string">         ...</span></span><br><span class="line"><span class="string">     ]</span></span><br><span class="line"><span class="string">     &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">     Only output valid JSON.</span></span><br><span class="line"><span class="string">     &quot;&quot;&quot;</span></span><br><span class="line">  ```  </span><br><span class="line">  The returned text <span class="keyword">is</span> parsed via `resp = json.loads(raw)` <span class="keyword">and</span> validated before calling `Sound.note_on()`.</span><br><span class="line"></span><br><span class="line">- **TTV <span class="keyword">and</span> VTT**:  </span><br><span class="line">  (“TTV” = Text-to-Voice <span class="keyword">and</span> “VTT” = Voice-to-Text)  </span><br><span class="line">  Two ASR/TTS pipelines:</span><br><span class="line">  - **VTT**: `SpeechToTextLocal` (Vosk) &amp; `SpeechToTextWhisper` (OpenAI) selectable.  </span><br><span class="line">  - **TTV**: `TextToSpeech` use system `espeak` to minimize latency.</span><br><span class="line">  ```python</span><br><span class="line">     subprocess.call(</span><br><span class="line">         [</span><br><span class="line">             <span class="string">&#x27;espeak&#x27;</span>,</span><br><span class="line">             <span class="string">f&#x27;-s<span class="subst">&#123;self.rate&#125;</span>&#x27;</span>,    <span class="comment"># set speaking rate</span></span><br><span class="line">             <span class="string">f&#x27;-a<span class="subst">&#123;self.volume&#125;</span>&#x27;</span>,  <span class="comment"># set volume amplitude</span></span><br><span class="line">             text</span><br><span class="line">         ],</span><br><span class="line">         stdout=subprocess.DEVNULL,</span><br><span class="line">         stderr=subprocess.DEVNULL</span><br><span class="line">     )</span><br></pre></td></tr></table></figure></div>
+<p>Support for streaming output reduces end-to-end latency.</p>
+</li>
+<li><p><strong>Circuit design</strong>:<br>We use an <strong>ADS1115</strong> ADC on I²C plus two tactile switches (<code>SW_REC</code> on GPIO 19, <code>SW_LLM</code> on GPIO 26) wired with pull-up and series resistors for reliable edge detection:<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/posts/ai-synth-cornell/circuit.png"
+                      alt="dfafa"
+                ></p>
+<div align="center">
+<p style="margin-top:10px; font-size:16px;">Fig5. Hardware Circuit Schematic Diagram</p>
+</div>
+
+<ul>
+<li><p><strong>Switch Debounce &amp; Safety</strong>:<br>The 10 kΩ pull-ups keep the lines high; the 1 kΩ series resistors limit fault currents if the pin is accidentally reconfigured as output.</p>
+</li>
+<li><p><strong>Potentiometer on ADS1115</strong>:<br>A 10 kΩ P160 potentiometer is wired as a voltage divider between 3.3 V and GND, with the wiper tied to <strong>ADS1115.AIN0</strong>:</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3.3 V ── P160 ── GND</span><br><span class="line">           │</span><br><span class="line">           └──&gt; ADS1115 AIN0 (16-bit, up to 860 SPS)</span><br></pre></td></tr></table></figure></div>
+
+<p>The ADS1115 returns a 0–65 535 count, which we scale to 0.0–1.0 and quantize to discrete parameter steps in <code>knob.py</code>.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Analog voltage input quantization</strong>:<br>The input voltage is quantized 1%, meaning that in the main function, whenever the knob is tuned and the difference is over 1%, the knob callback function is triggered to change the sound parameters. This makes the knob change real-time and also reduce CPU consumption as well.</p>
+</li>
+<li><p><strong>Adding a knobbing detection interval</strong>:<br>  Because ADS1115 doesn’t support GPIO callback function, the knobbing can only be polled in the main loop. To reduce system usage, we include a knobbing detection timestep to reduce the sampling rate. We set the interval to 0.1 seconds, and the voltage detection would only happen every 0.1 seconds:</p>
+ <div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> sd.OutputStream(samplerate=SAMPLE_RATE, channels=<span class="number">1</span>, dtype=<span class="string">&#x27;float32&#x27;</span>, callback=audio_callback):</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">while</span> running:</span><br><span class="line">            <span class="comment"># ...</span></span><br><span class="line">            <span class="keyword">if</span> now - knob_in0.last_time &gt; knob_in0.poll_interval:</span><br><span class="line">                knob_in0.last_time = now</span><br><span class="line">                new_voltage = knob_in0.channel.voltage</span><br><span class="line">                <span class="keyword">if</span> <span class="built_in">abs</span>(new_voltage - knob_in0.last_voltage) &gt; knob_in0.threshold:</span><br><span class="line">                    knob_in0.last_voltage = new_voltage</span><br><span class="line">                    on_knob_in0_voltage_change(new_voltage)</span><br><span class="line">            <span class="comment"># ...</span></span><br><span class="line">            clock.tick(<span class="number">30</span>)</span><br><span class="line">    <span class="keyword">except</span> KeyboardInterrupt:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="keyword">finally</span>:</span><br><span class="line">        <span class="keyword">del</span> pitft</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>Playback state machine and buffering</strong>:<br>Live audio recording and playback are controlled via a simple three-state system toggled by GPIO‑19:</p>
+<ul>
+<li><strong>State 0</strong>: Idle – wait for user input  </li>
+<li><strong>State 1</strong>: Recording – store output buffers in <code>record_frames</code>  </li>
+<li><strong>State 2</strong>: Playback – stream from <code>playback_buffer</code></li>
+</ul>
+<p>The logic is triggered via a GPIO interrupt:</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">GPIO19_callback</span>(<span class="params">channel</span>):</span><br><span class="line">    <span class="keyword">if</span> record_state == <span class="number">0</span>:</span><br><span class="line">        record_frames = []; record_state = <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> record_state == <span class="number">1</span>:</span><br><span class="line">        playback_buffer = np.concatenate(record_frames).flatten()</span><br><span class="line">        playback_pos = <span class="number">0</span>; record_state = <span class="number">2</span></span><br><span class="line">    <span class="keyword">elif</span> record_state == <span class="number">2</span>:</span><br><span class="line">        record_state = <span class="number">3</span>  <span class="comment"># Start playback</span></span><br></pre></td></tr></table></figure></div>
+
+<p>In <code>audio_callback</code>, it conditionally records or plays back:</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> record_state == <span class="number">1</span>:</span><br><span class="line">    record_frames.append(outdata[:, <span class="number">0</span>].copy())</span><br><span class="line"><span class="keyword">elif</span> record_state == <span class="number">3</span>:</span><br><span class="line">    outdata[:, <span class="number">0</span>] = playback_buffer[playback_pos:playback_pos+frames]</span><br><span class="line">    playback_pos += frames</span><br></pre></td></tr></table></figure></div>
+
+<p>This block-aligned, buffer-based approach allows seamless one-button looping with no latency issues, ideal for live capture and replay.</p>
+</li>
+<li><p><strong>Adaptive display module</strong>:<br>In <strong>view.py</strong> we defines sub-draw functions:  </p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br></pre></td><td class="code"><pre><span class="line">     rects = _compute_panel_regions(screen.get_size())</span><br><span class="line">     draw_waveform_preview(screen, rects[<span class="string">&#x27;waveform&#x27;</span>])</span><br><span class="line">     draw_envelope_preview(screen, rects[<span class="string">&#x27;envelope&#x27;</span>])</span><br><span class="line">     draw_filter_preview(screen, rects[<span class="string">&#x27;filter&#x27;</span>])</span><br><span class="line">     draw_AI_interface(screen, rects[<span class="string">&#x27;ai&#x27;</span>])</span><br><span class="line">     ```  </span><br><span class="line">     `draw_screen()` bundles these calls <span class="keyword">in</span> sequence, <span class="keyword">and</span> **main.py** simply calls `view.draw_screen()` each frame.</span><br><span class="line"></span><br><span class="line">     In addition, instead of a fixed FPS, we use a “dirty” flag to only update the PiTFT display when something changes:  </span><br><span class="line">     ```python</span><br><span class="line">     dirty = <span class="literal">True</span></span><br><span class="line">     <span class="keyword">while</span> running:</span><br><span class="line">         handle_events(<span class="keyword">lambda</span>: dirty=<span class="literal">True</span>)</span><br><span class="line">         <span class="keyword">if</span> dirty:</span><br><span class="line">             view.draw_screen()</span><br><span class="line">             pygame.display.update()</span><br><span class="line">             dirty = <span class="literal">False</span></span><br><span class="line">         clock.tick(<span class="number">30</span>)</span><br><span class="line">     ```  </span><br><span class="line">     Which brings the befinit of reducing CPU/GPU usage <span class="keyword">and</span> audio glitches by avoiding unnecessary redraws.</span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> **Challenges &amp; Trade‑offs**  </span><br><span class="line">   - **VTT Latency vs. Cost – Vosk vs. Whisper**  </span><br><span class="line">     Local `Vosk` runs entirely on‑device, adding ~<span class="number">10</span> s processing delay <span class="keyword">and</span> <span class="keyword">is</span> less accurate on noisy <span class="built_in">input</span> on Pi4. `OpenAI Whisper API` offers near‑human transcription quality, yet <span class="built_in">round</span>‑trip latency only <span class="number">400</span>–<span class="number">600</span> ms but incurs per‑minute usage fees. The project defaults to Vosk <span class="keyword">for</span> low‑price play.</span><br><span class="line"></span><br><span class="line">   - **Knob Accuracy vs. CPU Overhead**  </span><br><span class="line">     Reading the `ADS1115` per <span class="keyword">while</span> loop yields <span class="number">16</span>‑bit precision but consumes more CPU. Dropping to <span class="number">0.1</span>s per read reduces CPU use yet reduces effective resolution of knobing. However, the knobbing does <span class="keyword">not</span> require really-high resolution since this <span class="keyword">is</span> <span class="keyword">not</span> a professional DJ <span class="built_in">set</span>, <span class="keyword">and</span> <span class="number">0.1</span>s performs well without user noticing significant delay.</span><br><span class="line"></span><br><span class="line">   - **LLM Response Quality/Latency vs. API Expense**  </span><br><span class="line">     There are several OpenAI Models to choose <span class="keyword">from</span>, including `gpt-4o`, `gpt-4o-mini`, `gpt-o1`, `gpt-o3`. Among them, `gpt-4o-mini` <span class="keyword">is</span> the cheapest. However, it sould sometimes generate inconsistent result <span class="keyword">and</span> may <span class="keyword">not</span> follow the json schema. Since our prompt <span class="keyword">and</span> <span class="built_in">input</span> <span class="keyword">is</span> really limited, <span class="keyword">and</span> <span class="keyword">with</span> our testing, `gpt-4o-mini` <span class="keyword">is</span> a good <span class="keyword">and</span> stable choice.</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="comment">## Code Structure</span></span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">synth/</span><br><span class="line">├── main.py</span><br><span class="line">│   ├── ai_conversation_loop()</span><br><span class="line">│   ├── GPIO19_callback()</span><br><span class="line">│   ├── GPIO26_callback()</span><br><span class="line">│   ├── GPIO17_callback()</span><br><span class="line">│   ├── GPIO22_callback()</span><br><span class="line">│   ├── GPIO23_callback()</span><br><span class="line">│   ├── GPIO27_callback()</span><br><span class="line">│   ├── set_quantized()</span><br><span class="line">│   ├── on_knob_in0_voltage_change()</span><br><span class="line">│   └── audio_callback()</span><br><span class="line">│</span><br><span class="line">├── channel.py</span><br><span class="line">│   ├── Channel</span><br><span class="line">│   │   ├── __init__()</span><br><span class="line">│   │   └── process()</span><br><span class="line">│   ├── Waveform</span><br><span class="line">│   │   └── __init__()</span><br><span class="line">│   ├── Envelope</span><br><span class="line">│   │   ├── __init__()</span><br><span class="line">│   │   ├── update_samples()</span><br><span class="line">│   │   ├── note_on()</span><br><span class="line">│   │   ├── note_off()</span><br><span class="line">│   │   └── process()</span><br><span class="line">│   ├── Filter</span><br><span class="line">│   │   ├── __init__()</span><br><span class="line">│   │   └── apply()</span><br><span class="line">│   └── Reverb</span><br><span class="line">│       ├── __init__()</span><br><span class="line">│       └── apply()</span><br><span class="line">│</span><br><span class="line">├── sound.py</span><br><span class="line">│   └── Sound</span><br><span class="line">│       ├── __init__()</span><br><span class="line">│       ├── add_channel()</span><br><span class="line">│       ├── process()</span><br><span class="line">│       ├── note_on()</span><br><span class="line">│       ├── note_off()</span><br><span class="line">│       └── get_current_params()</span><br><span class="line">│</span><br><span class="line">├── view.py</span><br><span class="line">│   ├── Particle</span><br><span class="line">│   │   ├── __init__()</span><br><span class="line">│   │   ├── update()</span><br><span class="line">│   │   └── draw()</span><br><span class="line">│   ├── get_param_text_center()</span><br><span class="line">│   ├── draw_param()</span><br><span class="line">│   ├── draw_param_ring()</span><br><span class="line">│   ├── draw_params()</span><br><span class="line">│   ├── draw_texts()</span><br><span class="line">│   ├── draw_box()</span><br><span class="line">│   ├── _compute_panel_regions()</span><br><span class="line">│   ├── draw_waveform_preview()</span><br><span class="line">│   ├── draw_envelope_preview()</span><br><span class="line">│   ├── draw_filter_preview()</span><br><span class="line">│   ├── draw_screen()</span><br><span class="line">│   └── draw_AI_interface()</span><br><span class="line">│</span><br><span class="line">├── knob.py</span><br><span class="line">│   └── KnobInput</span><br><span class="line">│       ├── __init__()</span><br><span class="line">│       └── read_knob()</span><br><span class="line">│</span><br><span class="line">└── reaction.py</span><br><span class="line">    ├── call_synth_llm()</span><br><span class="line">    ├── LLMClient</span><br><span class="line">    │   ├── __init__()</span><br><span class="line">    │   └── gen_resp()</span><br><span class="line">    ├── SpeechToTextLocal</span><br><span class="line">    │   ├── __init__()</span><br><span class="line">    │   └── record_and_transcribe()</span><br><span class="line">    ├── SpeechToTextWhisper</span><br><span class="line">    │   ├── __init__()</span><br><span class="line">    │   └── record_and_transcribe()</span><br><span class="line">    └── TextToSpeech</span><br><span class="line">        ├── __init__()</span><br><span class="line">        └── speak()</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="Modules"><a href="#Modules" class="headerlink" title="Modules"></a>Modules</h2><h3 id="main-py"><a href="#main-py" class="headerlink" title="main.py"></a><code>main.py</code></h3><ul>
+<li><strong>Program entry &amp; event loop</strong>: sets up audio stream and dispatches GPIO&#x2F;AI&#x2F;UI events.  </li>
+<li><strong>ai_conversation_loop()</strong>: manages the AI listen–think–speak cycle.  </li>
+<li><strong>GPIO callbacks</strong> (<code>GPIO19_callback()</code>, <code>GPIO26_callback()</code>, <code>GPIO17_callback()</code>, <code>GPIO22_callback()</code>, <code>GPIO23_callback()</code>, <code>GPIO27_callback()</code>): handle record&#x2F;playback, AI-abort, note triggers, mode switches.  </li>
+<li><strong>set_quantized()</strong> &amp; <strong>on_knob_in0_voltage_change()</strong>: convert ADC readings into discrete synth parameters.  </li>
+<li><strong>audio_callback()</strong>: invoked by <code>sd.OutputStream</code>; pulls per-block samples via <code>sound.process()</code> and writes them to the DAC.</li>
+</ul>
+<h3 id="channel-py"><a href="#channel-py" class="headerlink" title="channel.py"></a><code>channel.py</code></h3><ul>
+<li><strong>Channel</strong>: encapsulates one synth voice; <code>__init__()</code> sets up oscillator, envelope, filter, reverb; <code>process()</code> generates one block of audio.  </li>
+<li><strong>Waveform</strong>: base class for oscillator tables&#x2F;waveforms.  </li>
+<li><strong>Envelope</strong>: ADSR generator (<code>__init__()</code>, <code>update_samples()</code>, <code>note_on()</code>, <code>note_off()</code>, <code>process()</code>), shaping amplitude sample-by-sample.  </li>
+<li><strong>Filter</strong>: Frequency modulation filter (<code>__init__()</code>, <code>apply()</code>), applied to each voice.  </li>
+<li><strong>Reverb</strong>: feedback-delay-network reverb (<code>__init__()</code>, <code>apply()</code>), adds spatial ambience.</li>
+</ul>
+<h3 id="sound-py"><a href="#sound-py" class="headerlink" title="sound.py"></a><code>sound.py</code></h3><ul>
+<li><strong>Sound</strong>: top-level audio engine container.  <ul>
+<li><code>__init__()</code>: initializes buffer, channel list.  </li>
+<li><code>add_channel()</code>: registers a new <code>Channel</code>.  </li>
+<li><code>process()</code>: mixes all channels into one float array per block.  </li>
+<li><code>note_on()</code>, <code>note_off()</code>: broadcast triggers to each channel’s envelope.  </li>
+<li><code>get_current_params()</code>: query realtime synth&#x2F;FX settings for UI.</li>
+</ul>
+</li>
+</ul>
+<h3 id="view-py"><a href="#view-py" class="headerlink" title="view.py"></a><code>view.py</code></h3><ul>
+<li><strong>Particle</strong>: visual “thinking” effect with <code>__init__()</code>, <code>update()</code>, <code>draw()</code>.  </li>
+<li><strong>Layout &amp; drawing utilities</strong>:  <ul>
+<li><code>get_param_text_center()</code>, <code>draw_param()</code>, <code>draw_param_ring()</code>, <code>draw_params()</code>, <code>draw_texts()</code>, <code>draw_box()</code>, <code>_compute_panel_regions()</code>.  </li>
+<li>Preview renderers: <code>draw_waveform_preview()</code>, <code>draw_envelope_preview()</code>, <code>draw_filter_preview()</code>.  </li>
+<li><strong>draw_AI_interface()</strong>: overlays UI during AI processing.</li>
+</ul>
+</li>
+<li><strong>draw_screen()</strong>: composes all sub-draw calls each frame.</li>
+</ul>
+<h3 id="knob-py"><a href="#knob-py" class="headerlink" title="knob.py"></a><code>knob.py</code></h3><ul>
+<li><strong>KnobInput</strong>: reads a potentiometer via SPI&#x2F;ADC;  <ul>
+<li><code>__init__()</code>: configures ADS1115 settings.  </li>
+<li><code>read_knob()</code>: samples, and quantizes into discrete control values.</li>
+</ul>
+</li>
+</ul>
+<h3 id="reaction-py"><a href="#reaction-py" class="headerlink" title="reaction.py"></a><code>reaction.py</code></h3><ul>
+<li><strong>call_synth_llm()</strong>: formats user prompt and queries LLM for synth commands.  </li>
+<li><strong>LLMClient</strong>: wrapper for API (<code>__init__()</code>, <code>gen_resp()</code>).  </li>
+<li><strong>SpeechToTextLocal</strong> &amp; <strong>SpeechToTextWhisper</strong> (<code>__init__()</code>, <code>record_and_transcribe()</code>): two ASR backends.  </li>
+<li><strong>TextToSpeech</strong>: synthesizes LLM responses into audio (<code>__init__()</code>, <code>speak()</code>).</li>
+</ul>
+<hr>
+<h2 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h2><ol>
+<li><p><strong>Software Testing</strong></p>
+<blockquote>
+<p>Our system is integrated by <code>channel.py</code>, <code>sound.py</code>, <code>view.py</code>, <code>knob.py</code>, and <code>reaction.py</code>. We developed these modules seperately, and tested them independently. In project folder <code>./testdemos</code>, you shall see an <code>LLM_action</code> folder, which contains files used to test the LLM module. In <code>test_key.py</code> and <code>saw_test.py</code>, the GPIO input with sound generation was tested. We developed our system in a progressive, with several checkpoints saved using <strong>git</strong>, each of which has been tested by running the entire program and see if there are any unfixed problems, which we will solve in the later version.</p>
+</blockquote>
+</li>
+<li><p><strong>Hardware Testing</strong></p>
+<blockquote>
+<p>Our hardware consists of a knob, an ADC1115, and several buttons with resistors and wires. To test the knob’s functionality, we used the voltmeter provided by the lab to measure the minimum and maximum values of our desired output. We ensured that the value range changes little in independent knobbing tests. After that, we connect the ADC1115 to the Pi and read its voltage signal using the script <code>test_ADS1115.py</code>. We observed a fast and stable voltage input, and only after that did we continue integrating the ADC module into our main program. For the buttons, we test it using simple <code>print()</code> function, and tuned the <strong>bouncetime</strong> to make minimum trigger faults.</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><blockquote>
+<p>In this project, we successfully implemented an AI-powered digital synthesizer that works smoothly. We did everything as planned, even beyond that. As planned, we successfully designed the software of real-time sound generation, <strong>envelope&#x2F;filter&#x2F;reverb</strong> effects, and <strong>playback</strong>. We built the fancy PiTFT display with <strong>dynamic ADSR graphics</strong>. We successfully built the hardware including the <strong>knob</strong> and the <strong>ADC</strong>, providing stable and low-latency real-time parameter tuning, which is astonishing. We also successfully included <strong>VTT</strong>, <strong>TTV</strong>, and <strong>LLM-API</strong> integration that works together smoothly as a vocal-chatbot. We successfully prompt the LLM to generate accurate parameters in <code>.json</code> format.</p>
+</blockquote>
+<blockquote>
+<p>Beyond our plan, we built a vivid <strong>AI-Sphere</strong> that dynamically changes when the AI listens&#x2F;speaks&#x2F;thinks, making the AI-sound generation process more interesting. Additionally, we performed several performance optimization techniques. First, we use an <strong>interval of 0.1s</strong> for ADC voltage sampling, successfully mitigated the overhead of polling due to unavailability of hardware interrupt. Second, we used a <code>dirty</code> flag to enable <strong>adaptive screen updating</strong>, letting the program draw UI only when parameters are updated and display needs to be changed. Third, we combine the <code>dirty</code> flag with our real-time sound generation for an <strong>interruptive sound play</strong> under AI mode. Because Pi4 cannot process dynamic AI-Sphere update together with sound play, we suspend the AI-Sphere drawing using dirty flag when sample sound is played after the configs are generated. In this way, users can hear the sound as soon as the AI generates it, giving immediate feedback. Last but not least, we support <strong>consecutive conversation</strong> under AI-mode. Users can ask questions and tune parameters endlessly with the LLM, and exit the AI-mode using voice control. The above optimizations together provide a smooth and astonishing experience of AI sound design under a Raspberry Pi 4.</p>
+</blockquote>
+<hr>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>This project demonstrates a fully integrated, low-latency software synthesizer with AI-driven control, real-time audio DSP, and an intuitive single-knob UI. We achieved sub ~ms trigger response, glitch-free envelopes and filters, and a stable reverb—all running on a Raspberry Pi 4 in parallel with on-device and cloud AI services. Key lessons include the importance of lean ISR logic, block-aligned parameter swaps to avoid audio artifacts, and “dirty-rect” display updates to preserve CPU headroom for sound. Future improvements could add multi-voice polyphony, melody generation, customizable convolution reverbs, a richer patch-management interface, and deeper integration of on-device neural networks for offline AI performance.</p>
+<hr>
+<h2 id="Future-Work"><a href="#Future-Work" class="headerlink" title="Future Work"></a>Future Work</h2><ol>
+<li><p><strong>Low-Latency AI Response</strong>. Currently, a request to AI would go through <code>VTT -&gt; LLM API -&gt; Cloud -&gt; LLM Response -&gt; TTV</code>, among which the <code>VTT</code> consumes around 5~10 seconds of time running on a local machine. It also takes ~5 seconds to run it on the cloud. We can equip our Pi with an accelerator to run the <code>VTT</code> model and reduce latency.</p>
+</li>
+<li><p><strong>DAW and MIDI Support</strong>. Our sound generation works well, but lacks interoperability. Our synthesizer is a stand-alone project that cannot connect with DJ setups, DAW(Digital Audio Workstation)s, and does not support MIDI input&#x2F;output. We can add those to fit our design with the industrial standard.</p>
+</li>
+<li><p><strong>Melody generation</strong>. Music is about sound and melodies, it would be boring to be able to generate just one tone. We can use LLM for <strong>time sequence generation</strong> and <strong>melody generation</strong>. Together with our sound generation, the Pi can play any song the user wants.</p>
+</li>
+</ol>
+<hr>
+<h2 id="Team-Contributions"><a href="#Team-Contributions" class="headerlink" title="Team Contributions"></a>Team Contributions</h2><div style="text-align: center; font-weight: bold; margin-bottom: 10px;">
+  <span style="display: inline-block; width: 45%;">Member</span>
+  <span style="display: inline-block; width: 45%;">Role</span>
+</div>
+
+<div style="display: flex; justify-content: center; margin-bottom: 20px;">
+  <div style="width: 45%; text-align: center;">
+    <p><strong>Zuoming Fu</strong></p>
+    <p>Main Developer</p>
+  </div>
+  <div style="width: 45%; text-align: center;">
+    <p style="font-size: 14px;">
+      Software system integration, hardware design,<br>
+      AI system integration, audio system,<br>
+      viewing and knobbing modules design.
+    </p>
+  </div>
+</div>
+
+<div style="display: flex; justify-content: center;">
+  <div style="width: 45%; text-align: center;">
+    <p><strong>Muyang Li</strong></p>
+    <p>AI Engineer</p>
+  </div>
+  <div style="width: 45%; text-align: center;">
+    <p style="font-size: 14px;">
+      AI system modules, LLM API,<br>
+      VTT and TTV modules,<br>
+      testing and optimization.
+    </p>
+  </div>
+</div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/posts/ai-synth-cornell/group.png"
+                      alt="Group"
+                ></p>
+<div align="center">
+     <p style="margin-top:10px; font-size:16px;">Fig6. Meet Our Team - Zuoming Fu (Left) Muyang Li (Right)</p>
+</div>
+
+<hr>
+<h2 id="Parts-List"><a href="#Parts-List" class="headerlink" title="Parts List"></a>Parts List</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.raspberrypi.com/products/raspberry-pi-4-model-b/"><strong>Raspberry Pi 4</strong></a>: $35.00  </li>
+<li><a target="_blank" rel="noopener" href="https://www.adafruit.com/product/1085?gQT=2"><strong>ADS1115</strong></a>: $14.95</li>
+<li><a target="_blank" rel="noopener" href="https://www.digikey.com/en/products/detail/adafruit-industries-llc/3367/6623861?gQT=1"><strong>USB Microphone</strong></a>: $5.95</li>
+<li><a target="_blank" rel="noopener" href="https://www.mouser.com/ProductDetail/BI-Technologies-TT-Electronics/P160KNP-4FB20B10K?qs=mJjUQczmFngrajss9Wgw2Q==&mgh=1&srsltid=AfmBOooE9YsIFA0Bk1FZDXcFPeDDDWYZaPtyGroa5-nBvDYRqGDM9oaTyjQ"><strong>P160 potentiometer</strong></a>: $2.29</li>
+<li><a href=""><strong>gpt-4o-mini</strong></a>: $0.15(input); $0.075(cacheinput); $0.60(output) per 1M tokens</li>
+<li><strong>Total</strong>: ~$58.2</li>
+</ul>
+<hr>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ol>
+<li><a class="link"   target="_blank" rel="noopener" href="https://www.pygame.org/" >Pygame Documentation<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>  </li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://python-sounddevice.readthedocs.io/en/0.5.1/api/index.html" >Sounddevice Documentation<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>  </li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://numpy.org/doc/stable/reference/routines.fft.html" >NumPy FFT Reference<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.io.wavfile.read.html" >Scipy Wavefile Reference<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://sourceforge.net/projects/raspberry-gpio-python/" >Raspberry Pi GPIO Library<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>  </li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://alphacephei.com/vosk/models" >Vosk Models<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://platform.openai.com/docs/guides/structured-outputs?api-mode=chat" >OpenAI Structured Outputs<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://www.ttelectronics.com/TTElectronics/media/ProductFiles/Datasheet/P160.pdf" >P160 Potentiometer Datasheet<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://cdn-shop.adafruit.com/datasheets/ads1115.pdf" >ADS1115 Datasheet<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://learn.adafruit.com/adafruit-4-channel-adc-breakouts/python-circuitpython" >ADS1x15 Library<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ol>
+
+		</div>
+
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/LLM/">#LLM</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/EDM/">#EDM</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/music/">#music</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/2025/10/20/gem5-copilot/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">gem5 Co-Pilot: AI Assistant Agent for Architectural Design Space Exploration</span>
+						<span class="post-nav-item">Prev posts</span>
+					</span>
+				</a>
+			</div>
+			
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+                    lang: 'zh-CN',
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">On this page</div>
+		<div class="page-title">AI-Powered Digital Synthesizer</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">AI-Powered Digital Synthesizer</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Table-of-Contents"><span class="nav-text">Table of Contents</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Objective"><span class="nav-text">Objective</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Detailed-Goals"><span class="nav-text">Detailed Goals</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Design-Implementation"><span class="nav-text">Design &amp; Implementation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Modules"><span class="nav-text">Modules</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#main-py"><span class="nav-text">main.py</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#channel-py"><span class="nav-text">channel.py</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sound-py"><span class="nav-text">sound.py</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#view-py"><span class="nav-text">view.py</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#knob-py"><span class="nav-text">knob.py</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reaction-py"><span class="nav-text">reaction.py</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Testing"><span class="nav-text">Testing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Results"><span class="nav-text">Results</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion"><span class="nav-text">Conclusion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Future-Work"><span class="nav-text">Future Work</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Team-Contributions"><span class="nav-text">Team Contributions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Parts-List"><span class="nav-text">Parts List</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-text">References</span></a></li></ol></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2025</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Zuoming Fu</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        2 posts in total
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.5</a></span>
+        </div>
+        
+        
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+
+</main>
+
+
+
+<script src="/js/build/libs/Swup.min.js"></script>
+
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+	
+<script src="/js/build/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/build/utils.js" type="module"></script>
+
+<script src="/js/build/main.js" type="module"></script>
+
+<script src="/js/build/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/build/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/build/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/build/layouts/categoryList.js" type="module"></script>
+
+
+
+
+
+    
+<script src="/js/build/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/layouts/lazyload.js" type="module"></script>
+
+
+
+
+
+
+  
+<script src="/js/build/libs/Typed.min.js"></script>
+
+  
+<script src="/js/build/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+    
+<script src="/js/build/libs/anime.min.js"></script>
+
+
+
+
+
+    
+<script src="/js/build/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/layouts/toc.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+<script src="/js/build/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+
+	
+</body>
+
+</html>
