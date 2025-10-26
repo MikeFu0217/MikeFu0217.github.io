@@ -123,7 +123,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://mikefu0217.github.io/2024/06/10/mrender/"/>
+    <link rel="canonical" href="https://mikefu0217.github.io/2024/10/12/the-jet-cube/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -133,16 +133,15 @@
         
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[Undergrad Design] MRender - A GPU Displayer for 3D Tomographic Images">
-<meta property="og:url" content="https://mikefu0217.github.io/2024/06/10/MRender/index.html">
+<meta property="og:title" content="[CS 5620 C1] The Jet-Cube">
+<meta property="og:url" content="https://mikefu0217.github.io/2024/10/12/the-jet-cube/index.html">
 <meta property="og:site_name" content="Zuoming&#39;s Website">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://mikefu0217.github.io/images/redefine-og.webp">
-<meta property="article:published_time" content="2024-06-10T01:00:00.000Z">
-<meta property="article:modified_time" content="2025-10-26T13:58:28.608Z">
+<meta property="article:published_time" content="2024-10-12T01:00:00.000Z">
+<meta property="article:modified_time" content="2025-10-26T14:39:36.925Z">
 <meta property="article:author" content="Zuoming Fu">
-<meta property="article:tag" content="Biomedical">
 <meta property="article:tag" content="Graphics">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://mikefu0217.github.io/images/redefine-og.webp">
@@ -157,7 +156,7 @@
     
     <title>
         
-            [Undergrad Design] MRender - A GPU Displayer for 3D Tomographic Images | Zuoming&#39;s Homepage
+            [CS 5620 C1] The Jet-Cube | Zuoming&#39;s Homepage
         
     </title>
 
@@ -384,10 +383,10 @@
 			
 			
 			
-			<img src="/images/posts/MRender/image.png" alt="[Undergrad Design] MRender - A GPU Displayer for 3D Tomographic Images" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			<img src="/images/posts/the-jet-cube/image.png" alt="[CS 5620 C1] The Jet-Cube" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
 			
 			<div class="w-full flex items-center absolute bottom-0 justify-start">
-				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">[Undergrad Design] MRender - A GPU Displayer for 3D Tomographic Images</h1>
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">[CS 5620 C1] The Jet-Cube</h1>
 			</div>
 			
 		</div>
@@ -408,15 +407,15 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2024-06-10 09:00</span>
-        <span class="mobile">2024-06-10 09:00</span>
+        <span class="desktop">2024-10-12 09:00</span>
+        <span class="mobile">2024-10-12 09:00</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-10-26 21:58:28</span>
-            <span class="mobile">2025-10-26 21:58:28</span>
+            <span class="desktop">2025-10-26 22:39:36</span>
+            <span class="mobile">2025-10-26 22:39:36</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -444,11 +443,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/Biomedical/">Biomedical</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/Graphics/">Graphics</a>&nbsp;
+                        <a href="/tags/Graphics/">Graphics</a>&nbsp;
                     </li>
                 
             </ul>
@@ -470,29 +465,44 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/MikeFu0217/MRender" >Github Repository<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p>This is a renderer with 3-axis &amp; 3D draggable display. It turns sequential 2D slices into a 3D volume, and allows users to rotate and translate the volume.</p>
-<p>It is built with qt5-C++, using Qt-designer.</p>
-<p>It supports:</p>
-<ul>
-<li>Image importing &amp; saving (PNG, JPEG, BMP)</li>
-<li>3-axis display</li>
-<li>3D draggable display</li>
-<li>Any-direction depth-adjustable perspection (with adjustable alpha-value)</li>
-<li>Synchronized 3D slices for 3-axis and perspective display</li>
-<li>Bounding-box display</li>
-<li>Volume rendering (with adjustable opacity)</li>
-<li>GPU acceleration (NVIDIA CUDA)</li>
-<li>Rendering accuracy adjustment</li>
-<li>Image interpolation (Binary, Linear, Cubic)</li>
-<li>Image segmentation (Threshold)</li>
+			<iframe width="100%" height="400" src="https://www.youtube.com/watch?v=QC8fZEMCK1A" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen>
+</iframe>
+
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=QC8fZEMCK1A" >Watch On Youtube<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>The Jet-Cube is a jet engine that can be manipulated using keyboard. It applies particle systems as the jet tails and the propellers. It adds collision detections to the cube, the propellers and the particles between the boundaries and the sea floor.</p>
+<h2 id="Keyboard-Operations"><a href="#Keyboard-Operations" class="headerlink" title="Keyboard Operations"></a>Keyboard Operations</h2><ul>
+<li>w: jet particles and create up force</li>
+<li>a: move left</li>
+<li>d: move right</li>
 </ul>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/posts/MRender/UI.png"
-                      alt="UI"
-                ></p>
+<h2 id="Components"><a href="#Components" class="headerlink" title="Components"></a>Components</h2><ul>
+<li>The jet-cube: realized using polygon</li>
+<li>The jet particles: realized using particle system. Emit when pressing w.</li>
+<li>The propeller: particle system attached to the jet-cube’s four corners. Can rotate according to different keyboard presses to show moving.</li>
+<li>The Oceans: realized using polygon.</li>
+</ul>
+<h2 id="App-state-control-panel"><a href="#App-state-control-panel" class="headerlink" title="App state control panel"></a>App state control panel</h2><ul>
+<li>JetEngineColor</li>
+<li>windForce: &lt;0 means blows left, &gt;0 blow right, &#x3D;0 no wind.</li>
+<li>emitRandom: particle initial velocity randomness.</li>
+<li>timeToLive: particle time of living. Set invisible after time of living.</li>
+<li>timeToLiveRandom:add randomness to each particle’s timeToLive</li>
+<li>particleColor</li>
+<li>turnOnParticleColorEffect: turn on particle color continuous changing.</li>
+<li>turnOnPropeller: turn on propeller</li>
+<li>propellerColor</li>
+</ul>
+<h2 id="Collision-Detection"><a href="#Collision-Detection" class="headerlink" title="Collision Detection"></a>Collision Detection</h2><ul>
+<li>When collide with canvas boundaries, bounce back (invert velocity on direction of collide, also reduce the velocity a bit as momentum loss).</li>
+<li>When collide with the Ocean Surface:<ul>
+<li>If velocity is large enough, cross the surface</li>
+<li>If velocity is small, bounce back.</li>
+<li>The same both when into and out of the Ocean, but with different thresholds.</li>
+</ul>
+</li>
+</ul>
 
 		</div>
 
@@ -500,10 +510,6 @@
 
 		
 		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
-			
-			<li class="tag-item mx-0.5">
-				<a href="/tags/Biomedical/">#Biomedical</a>&nbsp;
-			</li>
 			
 			<li class="tag-item mx-0.5">
 				<a href="/tags/Graphics/">#Graphics</a>&nbsp;
@@ -518,17 +524,29 @@
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
 			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2024/10/12/the-jet-cube/">
+				<a class="prev" rel="prev" href="/2024/10/15/PCG-mean-teacher/">
 					<span class="left arrow-icon flex justify-center items-center">
 						<i class="fa-solid fa-chevron-left"></i>
 					</span>
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item truncate max-w-48">[CS 5620 C1] The Jet-Cube</span>
+						<span class="post-nav-title-item truncate max-w-48">[Sensors 2024] Phonocardiogram (PCG) Murmur Detection Based on the Mean Teacher Method</span>
 						<span class="post-nav-item">Prev posts</span>
 					</span>
 				</a>
 			</div>
 			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2024/06/10/MRender/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">[Undergrad Design] MRender - A GPU Displayer for 3D Tomographic Images</span>
+						<span class="post-nav-item">Next posts</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
 			
 		</div>
 		
@@ -583,8 +601,8 @@
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">On this page</div>
-		<div class="page-title">[Undergrad Design] MRender - A GPU Displayer for 3D Tomographic Images</div>
-		
+		<div class="page-title">[CS 5620 C1] The Jet-Cube</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Keyboard-Operations"><span class="nav-text">Keyboard Operations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Components"><span class="nav-text">Components</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#App-state-control-panel"><span class="nav-text">App state control panel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collision-Detection"><span class="nav-text">Collision Detection</span></a></li></ol>
 
 	</div>
 </div>
