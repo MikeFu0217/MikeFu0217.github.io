@@ -54,7 +54,9 @@
 
   const initAll = () => {
     document.querySelectorAll('.post-recent-viewed').forEach((card) => {
-      recordVisit(card.dataset.currentPath, card.dataset.currentTitle);
+      if (card.dataset.isPost === 'true') {
+        recordVisit(card.dataset.currentPath, card.dataset.currentTitle);
+      }
       render(card);
     });
   };
