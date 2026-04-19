@@ -2399,9 +2399,27 @@ html.is-animating .transition-navbar {
   margin-top: 22.8px;
   padding: 15px;
   border-radius: 18px;
-  background-color: var(--background-color);
-  border: 1px solid var(--border-color);
-  box-shadow: var(--redefine-box-shadow-flat);
+  box-sizing: border-box;
+  background-color: var(--background-color-transparent-80) !important;
+  backdrop-filter: blur(12px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(150%) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
+  box-shadow: var(--redefine-box-shadow);
+}
+.post-recent-viewed:hover {
+  box-shadow: var(--redefine-box-shadow-hover);
+}
+@media (max-width: 768px) {
+  .post-recent-viewed {
+    padding: 11px;
+    border-radius: 18px;
+  }
+}
+@media (max-width: 640px) {
+  .post-recent-viewed {
+    padding: 7px;
+    border-radius: 18px;
+  }
 }
 .post-recent-viewed .recent-viewed-title {
   font-size: 1rem;
@@ -2675,9 +2693,27 @@ html.is-animating .scroll-progress-bar {
   margin-top: 22.8px;
   padding: 15px;
   border-radius: 18px;
-  background-color: var(--background-color);
-  border: 1px solid var(--border-color);
-  box-shadow: var(--redefine-box-shadow-flat);
+  box-sizing: border-box;
+  background-color: var(--background-color-transparent-80) !important;
+  backdrop-filter: blur(12px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(150%) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
+  box-shadow: var(--redefine-box-shadow);
+}
+.sidebar-tag-card:hover {
+  box-shadow: var(--redefine-box-shadow-hover);
+}
+@media (max-width: 768px) {
+  .sidebar-tag-card {
+    padding: 11px;
+    border-radius: 18px;
+  }
+}
+@media (max-width: 640px) {
+  .sidebar-tag-card {
+    padding: 7px;
+    border-radius: 18px;
+  }
 }
 .sidebar-tag-card .tag-card-title {
   font-size: 1rem;
