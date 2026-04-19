@@ -1,5 +1,6 @@
 (() => {
-  const WHEEL_THROTTLE_MS = 400;
+  const GESTURE_END_MS = 300;
+  const MIN_WHEEL_DELTA = 8;
   const FADE_MS = 200;
 
   const state = new WeakMap();
@@ -93,7 +94,8 @@
       index: startIndex,
       autoTimer: null,
       fadeTimer: null,
-      lastWheelAt: 0,
+      gestureLock: false,
+      unlockTimer: null,
     };
     state.set(card, s);
 
@@ -101,9 +103,16 @@
       'wheel',
       (e) => {
         e.preventDefault();
-        const now = Date.now();
-        if (now - s.lastWheelAt < WHEEL_THROTTLE_MS) return;
-        s.lastWheelAt = now;
+        if (Math.abs(e.deltaY) < MIN_WHEEL_DELTA) return;
+
+        clearTimeout(s.unlockTimer);
+        s.unlockTimer = setTimeout(() => {
+          s.gestureLock = false;
+        }, GESTURE_END_MS);
+
+        if (s.gestureLock) return;
+        s.gestureLock = true;
+
         const dir = e.deltaY > 0 ? 1 : -1;
         setPhoto(card, s.index + dir);
       },
