@@ -399,7 +399,10 @@ button {
   padding: 0;
   border-radius: 18px;
   box-sizing: border-box;
-  background: var(--background-color);
+  background-color: var(--background-color-transparent-80) !important;
+  backdrop-filter: blur(12px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(150%) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
   margin-bottom: 1rem;
   box-shadow: var(--redefine-box-shadow);
   box-shadow: var(--redefine-box-shadow-flat) !important;
@@ -1918,7 +1921,10 @@ pre .deletion {
   padding: 10px;
   border-radius: 18px;
   box-sizing: border-box;
-  background: var(--background-color);
+  background-color: var(--background-color-transparent-80) !important;
+  backdrop-filter: blur(12px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(150%) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
   margin-bottom: 5px;
   box-shadow: var(--redefine-box-shadow);
 }
@@ -2066,7 +2072,10 @@ html.is-animating .transition-navbar {
   padding: 30px;
   border-radius: 18px;
   box-sizing: border-box;
-  background: var(--background-color);
+  background-color: var(--background-color-transparent-80) !important;
+  backdrop-filter: blur(12px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(150%) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
   margin-bottom: 30px;
   box-shadow: var(--redefine-box-shadow);
 /* Loading */
@@ -3612,7 +3621,10 @@ a.button {
   padding: 0;
   border-radius: 18px;
   box-sizing: border-box;
-  background: var(--background-color);
+  background-color: var(--background-color-transparent-80) !important;
+  backdrop-filter: blur(12px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(150%) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
   margin-bottom: 1rem;
   box-shadow: var(--redefine-box-shadow);
   box-shadow: var(--redefine-box-shadow-flat) !important;
@@ -4546,7 +4558,10 @@ html.is-animating .transition-fade-down {
   padding: 0px;
   border-radius: 18px;
   box-sizing: border-box;
-  background: var(--background-color);
+  background-color: var(--background-color-transparent-80) !important;
+  backdrop-filter: blur(12px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(150%) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
   margin-bottom: 38px;
   box-shadow: var(--redefine-box-shadow);
   transition-property: color, background, box-shadow, border-color, transform;
@@ -4659,7 +4674,10 @@ html.is-animating .transition-fade-down {
   padding: 30px;
   border-radius: 18px;
   box-sizing: border-box;
-  background: var(--background-color);
+  background-color: var(--background-color-transparent-80) !important;
+  backdrop-filter: blur(12px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(150%) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
   margin-bottom: 30px;
   box-shadow: var(--redefine-box-shadow);
 }
@@ -4746,7 +4764,10 @@ html.is-animating .transition-fade-down {
   padding: 0;
   border-radius: 18px;
   box-sizing: border-box;
-  background: var(--background-color);
+  background-color: var(--background-color-transparent-80) !important;
+  backdrop-filter: blur(12px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(150%) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
   margin-bottom: 30px;
   box-shadow: var(--redefine-box-shadow);
 }
@@ -4902,7 +4923,10 @@ html.is-animating .transition-fade-down {
   padding: 10px;
   border-radius: 18px;
   box-sizing: border-box;
-  background: var(--background-color);
+  background-color: var(--background-color-transparent-80) !important;
+  backdrop-filter: blur(12px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(150%) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
   box-shadow: var(--redefine-box-shadow);
   box-shadow: var(--redefine-box-shadow-flat);
   padding: 12px !important;
@@ -5019,7 +5043,10 @@ html.is-animating .transition-fade-down {
   padding: 30px;
   border-radius: 18px;
   box-sizing: border-box;
-  background: var(--background-color);
+  background-color: var(--background-color-transparent-80) !important;
+  backdrop-filter: blur(12px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(150%) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
   margin-bottom: 30px;
   box-shadow: var(--redefine-box-shadow);
 }
@@ -5091,7 +5118,10 @@ html.is-animating .transition-fade-down {
   padding: 20px;
   border-radius: 18px;
   box-sizing: border-box;
-  background: var(--background-color);
+  background-color: var(--background-color-transparent-80) !important;
+  backdrop-filter: blur(12px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(150%) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
   box-shadow: var(--redefine-box-shadow);
 }
 .home-sidebar-container .sidebar-content:hover {
@@ -5140,7 +5170,10 @@ html.is-animating .transition-fade-down {
   padding: 15px;
   border-radius: 18px;
   box-sizing: border-box;
-  background: var(--background-color);
+  background-color: var(--background-color-transparent-80) !important;
+  backdrop-filter: blur(12px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(150%) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
   box-shadow: var(--redefine-box-shadow);
 }
 .home-sidebar-container .sidebar-links:hover {
@@ -5218,4 +5251,29 @@ html.is-animating .transition-fade-down {
   padding: 5px 0;
   color: var(--second-text-color);
   text-align: center;
+}
+.home-banner-container {
+  background: none !important;
+}
+a.page-number,
+a.extend,
+.sidebar-links .links:hover,
+.right-bottom-tools,
+footer.footer {
+  background-color: var(--background-color-transparent-80) !important;
+}
+.right-bottom-tools:hover,
+a.page-number:hover,
+a.extend:hover {
+  background-color: var(--primary-color) !important;
+}
+.site-info,
+.home-article-sticky-label {
+  background-color: var(--background-color-transparent-15) !important;
+}
+.home-article-sticky-label {
+  backdrop-filter: none !important;
+}
+.home-banner-background {
+  filter: blur(15px);
 }

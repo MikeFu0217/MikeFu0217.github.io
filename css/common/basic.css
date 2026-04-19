@@ -399,7 +399,10 @@ button {
   padding: 0;
   border-radius: 18px;
   box-sizing: border-box;
-  background: var(--background-color);
+  background-color: var(--background-color-transparent-80) !important;
+  backdrop-filter: blur(12px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(150%) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
   margin-bottom: 1rem;
   box-shadow: var(--redefine-box-shadow);
   box-shadow: var(--redefine-box-shadow-flat) !important;
