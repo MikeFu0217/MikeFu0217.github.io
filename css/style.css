@@ -2482,25 +2482,36 @@ html.is-animating .scroll-progress-bar {
 }
 .sidebar-photo-card {
   margin-top: 22.8px;
-  padding: 6px;
-  border-radius: 18px;
-  background-color: var(--background-color);
+  border-radius: 48px;
   border: 1px solid var(--border-color);
   box-shadow: var(--redefine-box-shadow-flat);
   overflow: hidden;
   user-select: none;
   cursor: zoom-in;
+  aspect-ratio: 1/1;
+  display: block;
 }
 .sidebar-photo-card .photo-card-image {
   display: block;
   width: 100%;
-  aspect-ratio: 1/1;
+  height: 100%;
   object-fit: cover;
-  border-radius: calc(($redefine-border-radius-large - 4px));
   transition: opacity 0.25s ease;
 }
 .sidebar-photo-card .photo-card-image.photo-card-fading {
   opacity: 0;
+}
+.sidebar-photo-card.photo-card-empty {
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar-photo-card .photo-card-placeholder {
+  font-size: 0.85rem;
+  color: var(--third-text-color);
+  text-align: center;
+  padding: 8px;
 }
 .photo-card-lightbox {
   position: fixed;
@@ -4989,10 +5000,11 @@ html.is-animating .transition-fade-down {
 .home-sidebar-container .sidebar-content .avatar img {
   width: 80px;
   height: 80px;
-  border-radius: 18px;
+  border-radius: 50%;
   box-shadow: var(--redefine-box-shadow-flat);
   border: 1px solid var(--border-color);
   padding: 1px;
+  object-fit: cover;
 }
 .home-sidebar-container .sidebar-content .avatar img:hover {
   box-shadow: var(--redefine-box-shadow);
