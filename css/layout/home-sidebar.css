@@ -163,10 +163,11 @@
 .home-sidebar-container .sidebar-content .avatar img {
   width: 80px;
   height: 80px;
-  border-radius: 18px;
+  border-radius: 50%;
   box-shadow: var(--redefine-box-shadow-flat);
   border: 1px solid var(--border-color);
   padding: 1px;
+  object-fit: cover;
 }
 .home-sidebar-container .sidebar-content .avatar img:hover {
   box-shadow: var(--redefine-box-shadow);
