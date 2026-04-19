@@ -23,7 +23,7 @@
   const recordVisit = (path, title) => {
     if (!path || !title) return;
     const history = readHistory().filter((entry) => entry.path !== path);
-    history.unshift({ path, title, ts: Date.now() });
+    history.unshift({ path, title, ts: Date.now(), isPost: true });
     writeHistory(history.slice(0, MAX_STORED));
   };
 
@@ -35,7 +35,7 @@
     const limit = Number(card.dataset.limit) || 3;
     const currentPath = card.dataset.currentPath || '';
     const entries = readHistory()
-      .filter((entry) => entry.path !== currentPath)
+      .filter((entry) => entry.path !== currentPath && entry.isPost === true)
       .slice(0, limit);
 
     list.innerHTML = '';
