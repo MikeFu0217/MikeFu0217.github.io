@@ -261,22 +261,6 @@
 .page-container .main-content-container .main-content-body .main-content.has-toc {
   max-width: 1200px !important;
 }
-.page-container .main-content-container .main-content-body .main-content:has(.post-page-container.show-left-sidebar) {
-  width: 90%;
-  max-width: none !important;
-}
-@media (max-width: 768px) {
-  .page-container .main-content-container .main-content-body .main-content:has(.post-page-container.show-left-sidebar) {
-    width: 86%;
-    max-width: 100% !important;
-  }
-}
-@media (max-width: 640px) {
-  .page-container .main-content-container .main-content-body .main-content:has(.post-page-container.show-left-sidebar) {
-    width: 90%;
-    max-width: 100% !important;
-  }
-}
 .page-container .main-content-container .main-content-body .main-content-footer {
   width: 100%;
 }

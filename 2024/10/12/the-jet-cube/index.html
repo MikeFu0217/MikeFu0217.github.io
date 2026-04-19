@@ -236,6 +236,51 @@
 <main class="page-container" id="swup">
 
 	
+	<style>
+    .home-article-item,
+    .sidebar-links,
+    .sidebar-content,
+    a.page-number,
+    a.extend,
+    .sidebar-links .links:hover,
+    .right-bottom-tools,
+    footer.footer,
+    .article-content-container,
+    .archive-container,
+    .category-container,
+    .tag-container,
+    .post-tools-container,
+    .comment-container {
+        background-color: var(--background-color-transparent-80) !important;
+        backdrop-filter: blur(12px) saturate(150%) !important;
+        -webkit-backdrop-filter: blur(12px) saturate(150%) !important;
+        border-radius: var(--border-radius-large) !important;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+    }
+    .right-bottom-tools:hover,
+    a.page-number:hover,
+    a.extend:hover {
+        background-color: var(--primary-color) !important;
+    }
+    .site-info,
+    .home-article-sticky-label {
+        background-color: var(--background-color-transparent-15) !important;
+    }
+    .home-article-sticky-label {
+        backdrop-filter: none !important;
+    }
+    .home-banner-background {
+        filter: blur(15px);
+    }
+</style>
+
+<div class="home-banner-background transition-fade fixed top-0 left-0 w-screen h-screen scale-125 sm:scale-110 box-border will-change-transform bg-cover">
+    <img src="/images/wallpapers/ldjjInk.webp" alt="home-banner-background" class="w-full h-full object-cover dark:hidden">
+    <img src="/images/wallpapers/hutao1.webp" alt="home-banner-background" class="w-full h-full object-cover hidden dark:block">
+</div>
+
+
+	
 
 	<div class="main-content-container flex flex-col justify-between min-h-dvh">
 		<div class="main-content-header">
@@ -466,20 +511,6 @@
 		
 			
 
-<div class="post-recent-viewed"
-     data-limit="3"
-     data-current-path="/2024/10/12/the-jet-cube/"
-     data-current-title="[CS 5620 C1] The Jet-Cube">
-  <div class="recent-viewed-title">Recently Viewed</div>
-  <ul class="recent-viewed-list"></ul>
-  <div class="recent-viewed-empty">No recently viewed posts yet.</div>
-</div>
-
-
-		
-		
-			
-
 
 <div class="sidebar-tag-card">
   <div class="tag-card-title">Tags</div>
@@ -498,6 +529,11 @@
       <a class="tag-pill" href="/tags/LLM/">
         <span class="tag-name">LLM</span>
         <span class="tag-count">2</span>
+      </a>
+    
+      <a class="tag-pill" href="/tags/music/">
+        <span class="tag-name">music</span>
+        <span class="tag-count">1</span>
       </a>
     
       <a class="tag-pill" href="/tags/Computer-Architecture/">
@@ -520,14 +556,23 @@
         <span class="tag-count">1</span>
       </a>
     
-      <a class="tag-pill" href="/tags/music/">
-        <span class="tag-name">music</span>
-        <span class="tag-count">1</span>
-      </a>
-    
 
     
   </div>
+</div>
+
+
+		
+		
+			
+
+<div class="post-recent-viewed"
+     data-limit="3"
+     data-current-path="/2024/10/12/the-jet-cube/"
+     data-current-title="[CS 5620 C1] The Jet-Cube">
+  <div class="recent-viewed-title">Recently Viewed</div>
+  <ul class="recent-viewed-list"></ul>
+  <div class="recent-viewed-empty">No recently viewed posts yet.</div>
 </div>
 
 
@@ -844,26 +889,17 @@ allowfullscreen>
 	</div>
 
 	
-	
 	<div class="post-tools">
-		
-<div class="post-tools-container">
+		<div class="post-tools-container">
 	<ul class="article-tools-list">
-		<!-- Left aside toggle -->
-		
-		<li class="right-bottom-tools page-left-aside-toggle">
-			<i class="fa-regular fa-indent"></i>
-		</li>
-		
-
-		<!-- TOC aside toggle (post only) -->
+		<!-- TOC aside toggle -->
 		
 		<li class="right-bottom-tools page-aside-toggle">
 			<i class="fa-regular fa-outdent"></i>
 		</li>
 		
 
-		<!-- go comment (post only) -->
+		<!-- go comment -->
 		
 		<li class="go-comment">
 			<i class="fa-regular fa-comments"></i>
@@ -871,7 +907,6 @@ allowfullscreen>
 		
 	</ul>
 </div>
-
 	</div>
 	
 
@@ -1069,7 +1104,6 @@ allowfullscreen>
 <script src="/js/plugins/tag-card-more.js"></script>
 <script src="/js/plugins/photo-card.js" data-swup-reload-script></script>
 <script src="/js/plugins/recent-viewed.js" data-swup-reload-script></script>
-<script src="/js/plugins/leftAsideToggle.js" data-swup-reload-script></script>
 	
 	<div id="aplayer"></div>
 
