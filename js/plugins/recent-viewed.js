@@ -1,5 +1,5 @@
 (() => {
-  const STORAGE_KEY = 'blog-recent-viewed';
+  const STORAGE_KEY = 'blog-recent-viewed-v2';
   const MAX_STORED = 20;
 
   const readHistory = () => {

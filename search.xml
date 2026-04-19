@@ -50,6 +50,21 @@
       </tags>
   </entry>
   <entry>
+    <title>[CAMS 2025] gem5 Co-Pilot: AI Assistant Agent for Architectural Design Space Exploration</title>
+    <url>/2025/10/20/gem5-copilot/</url>
+    <content><![CDATA[<p>Presented at the <a class="link"   href="https://sarchlab.org/cams25" >CAMS’25 workshop<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, Micro 2025, Seoul, Korea.</p>
+<p><a class="link"   href="https://arxiv.org/abs/2510.19577" >Arxiv Page<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>Generative AI is increasing the productivity of software and hardware development across many application domains. In this work, we utilize the power of Large Language Models (LLMs) to develop a co-pilot agent for assisting gem5 users with automating design space exploration. Computer architecture design space exploration is complex and time-consuming, given that numerous parameter settings and simulation statistics must be analyzed before improving the current design. The emergence of LLMs has significantly accelerated the analysis of long-text data as well as smart decision making, two key functions in a successful design space exploration task. In this project, we first build gem5 Co-Pilot, an AI agent assistant for gem5, which comes with a webpage-GUI for smooth user interaction, agent automation, and result summarization. We also implemented a language for design space exploration, as well as a Design Space Database (DSDB). With DSDB, gem5 Co-Pilot effectively implements a Retrieval Augmented Generation system for gem5 design space exploration. We experiment on cost-constraint optimization with four cost ranges and compare our results with two baseline models. Results show that gem5 Co-Pilot can quickly identify optimal parameters for specific design constraints based on performance and cost, with limited user interaction.</p>
+]]></content>
+      <categories>
+        <category>paper</category>
+      </categories>
+      <tags>
+        <tag>Computer Architecture</tag>
+        <tag>LLM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[ECE 5725] AI-Powered Digital Synthesizer</title>
     <url>/2025/05/26/ai-synth-cornell/</url>
     <content><![CDATA[<div align="center">
@@ -374,41 +389,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[CAMS 2025] gem5 Co-Pilot: AI Assistant Agent for Architectural Design Space Exploration</title>
-    <url>/2025/10/20/gem5-copilot/</url>
-    <content><![CDATA[<p>Presented at the <a class="link"   href="https://sarchlab.org/cams25" >CAMS’25 workshop<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, Micro 2025, Seoul, Korea.</p>
-<p><a class="link"   href="https://arxiv.org/abs/2510.19577" >Arxiv Page<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>Generative AI is increasing the productivity of software and hardware development across many application domains. In this work, we utilize the power of Large Language Models (LLMs) to develop a co-pilot agent for assisting gem5 users with automating design space exploration. Computer architecture design space exploration is complex and time-consuming, given that numerous parameter settings and simulation statistics must be analyzed before improving the current design. The emergence of LLMs has significantly accelerated the analysis of long-text data as well as smart decision making, two key functions in a successful design space exploration task. In this project, we first build gem5 Co-Pilot, an AI agent assistant for gem5, which comes with a webpage-GUI for smooth user interaction, agent automation, and result summarization. We also implemented a language for design space exploration, as well as a Design Space Database (DSDB). With DSDB, gem5 Co-Pilot effectively implements a Retrieval Augmented Generation system for gem5 design space exploration. We experiment on cost-constraint optimization with four cost ranges and compare our results with two baseline models. Results show that gem5 Co-Pilot can quickly identify optimal parameters for specific design constraints based on performance and cost, with limited user interaction.</p>
-]]></content>
-      <categories>
-        <category>paper</category>
-      </categories>
-      <tags>
-        <tag>LLM</tag>
-        <tag>Computer Architecture</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>I LOVE LIVE!!!</title>
-    <url>/2026/02/11/i-love-live/</url>
-    <content><![CDATA[<h1 id="This-is-how-I-get-into-Ableton-live"><a href="#This-is-how-I-get-into-Ableton-live" class="headerlink" title="This is how I get into Ableton live!"></a>This is how I get into Ableton live!</h1><p><a class="link"   href="https://www.youtube.com/watch?v=a703fGo9iNE" >Thanks for this impressive video shows so much details in just 30 minutes!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h1 id="Instruments"><a href="#Instruments" class="headerlink" title="Instruments"></a>Instruments</h1><h2 id="Drums"><a href="#Drums" class="headerlink" title="Drums"></a>Drums</h2><p><a class="link"   href="https://www.youtube.com/watch?v=htiSWoH-kTU" >Ableton Drum Rack in Detail<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=mPQdK6c4yhU" >Trance Kick using Kick2<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=VqsQJKJgkEU" >Perfect PsyTrance Kick using Kick2<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h2 id="Synth"><a href="#Synth" class="headerlink" title="Synth"></a>Synth</h2><p>Wavetable is the first DAW-naive synth I found elegant, precise, powerful.<br><a class="link"   href="https://www.youtube.com/watch?v=aLOYhVQbhp8" >Treasure Wavetable Crash Course!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=zZW7mgsvAjQ&list=PLYzt2_QLeO9UW63YgwrryCM8mEQLAebRH" >Wavetable Sound Design (Like Anyma) Channel)<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=Cu6Y2bKTh3M" >Awesome Psy-Trance bass using wavetable!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p>Alanog, I first new it…<br><a class="link"   href="https://www.youtube.com/results?search_query=ableton+analog" >Ableton Alanog Synthesizer<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p>Operator? Sounds like an effect haha.<br><a class="link"   href="https://www.youtube.com/watch?v=Xahbn7OjRF4" >Ableton Operator Instrument<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h1 id="Audio-Effects"><a href="#Audio-Effects" class="headerlink" title="Audio Effects"></a>Audio Effects</h1><h2 id="Gain"><a href="#Gain" class="headerlink" title="Gain"></a>Gain</h2><h2 id="Filter-EQ"><a href="#Filter-EQ" class="headerlink" title="Filter&#x2F;EQ"></a>Filter&#x2F;EQ</h2><h2 id="Dynamics"><a href="#Dynamics" class="headerlink" title="Dynamics"></a>Dynamics</h2><h2 id="Non-linearity"><a href="#Non-linearity" class="headerlink" title="Non-linearity"></a>Non-linearity</h2><p><a class="link"   href="https://www.youtube.com/watch?v=x3RD2-2h8_s" >Ableton Saturator<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h2 id="Time-domain"><a href="#Time-domain" class="headerlink" title="Time-domain"></a>Time-domain</h2><h2 id="Stereo-field"><a href="#Stereo-field" class="headerlink" title="Stereo field"></a>Stereo field</h2><h2 id="Modulation"><a href="#Modulation" class="headerlink" title="Modulation"></a>Modulation</h2><h1 id="Producing"><a href="#Producing" class="headerlink" title="Producing"></a>Producing</h1><h2 id="Trance"><a href="#Trance" class="headerlink" title="Trance"></a>Trance</h2><h2 id="Techno"><a href="#Techno" class="headerlink" title="Techno"></a>Techno</h2><p><a class="link"   href="https://www.youtube.com/watch?v=Tbvn_cEux3U" >Experimental Techno using Ableton Live<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h1 id="Treasures"><a href="#Treasures" class="headerlink" title="Treasures"></a>Treasures</h1><p><a class="link"   href="https://www.youtube.com/watch?v=xuc24_HK90E" >AI will never replace art: Art is feeling, the feeling you, as a person has when you create it, and express it.<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-]]></content>
-      <categories>
-        <category>music</category>
-      </categories>
-      <tags>
-        <tag>EDM</tag>
-        <tag>Producing</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[CS 5620 C1] The Jet-Cube</title>
     <url>/2024/10/12/the-jet-cube/</url>
     <content><![CDATA[<iframe width="100%" height="400" src="https://www.youtube.com/watch?v=QC8fZEMCK1A" 
@@ -455,6 +435,26 @@ allowfullscreen>
       </categories>
       <tags>
         <tag>Graphics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>I LOVE LIVE!!!</title>
+    <url>/2026/02/11/i-love-live/</url>
+    <content><![CDATA[<h1 id="This-is-how-I-get-into-Ableton-live"><a href="#This-is-how-I-get-into-Ableton-live" class="headerlink" title="This is how I get into Ableton live!"></a>This is how I get into Ableton live!</h1><p><a class="link"   href="https://www.youtube.com/watch?v=a703fGo9iNE" >Thanks for this impressive video shows so much details in just 30 minutes!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h1 id="Instruments"><a href="#Instruments" class="headerlink" title="Instruments"></a>Instruments</h1><h2 id="Drums"><a href="#Drums" class="headerlink" title="Drums"></a>Drums</h2><p><a class="link"   href="https://www.youtube.com/watch?v=htiSWoH-kTU" >Ableton Drum Rack in Detail<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=mPQdK6c4yhU" >Trance Kick using Kick2<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=VqsQJKJgkEU" >Perfect PsyTrance Kick using Kick2<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="Synth"><a href="#Synth" class="headerlink" title="Synth"></a>Synth</h2><p>Wavetable is the first DAW-naive synth I found elegant, precise, powerful.<br><a class="link"   href="https://www.youtube.com/watch?v=aLOYhVQbhp8" >Treasure Wavetable Crash Course!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=zZW7mgsvAjQ&list=PLYzt2_QLeO9UW63YgwrryCM8mEQLAebRH" >Wavetable Sound Design (Like Anyma) Channel)<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=Cu6Y2bKTh3M" >Awesome Psy-Trance bass using wavetable!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>Alanog, I first new it…<br><a class="link"   href="https://www.youtube.com/results?search_query=ableton+analog" >Ableton Alanog Synthesizer<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>Operator? Sounds like an effect haha.<br><a class="link"   href="https://www.youtube.com/watch?v=Xahbn7OjRF4" >Ableton Operator Instrument<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h1 id="Audio-Effects"><a href="#Audio-Effects" class="headerlink" title="Audio Effects"></a>Audio Effects</h1><h2 id="Gain"><a href="#Gain" class="headerlink" title="Gain"></a>Gain</h2><h2 id="Filter-EQ"><a href="#Filter-EQ" class="headerlink" title="Filter&#x2F;EQ"></a>Filter&#x2F;EQ</h2><h2 id="Dynamics"><a href="#Dynamics" class="headerlink" title="Dynamics"></a>Dynamics</h2><h2 id="Non-linearity"><a href="#Non-linearity" class="headerlink" title="Non-linearity"></a>Non-linearity</h2><p><a class="link"   href="https://www.youtube.com/watch?v=x3RD2-2h8_s" >Ableton Saturator<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="Time-domain"><a href="#Time-domain" class="headerlink" title="Time-domain"></a>Time-domain</h2><h2 id="Stereo-field"><a href="#Stereo-field" class="headerlink" title="Stereo field"></a>Stereo field</h2><h2 id="Modulation"><a href="#Modulation" class="headerlink" title="Modulation"></a>Modulation</h2><h1 id="Producing"><a href="#Producing" class="headerlink" title="Producing"></a>Producing</h1><h2 id="Trance"><a href="#Trance" class="headerlink" title="Trance"></a>Trance</h2><h2 id="Techno"><a href="#Techno" class="headerlink" title="Techno"></a>Techno</h2><p><a class="link"   href="https://www.youtube.com/watch?v=Tbvn_cEux3U" >Experimental Techno using Ableton Live<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h1 id="Treasures"><a href="#Treasures" class="headerlink" title="Treasures"></a>Treasures</h1><p><a class="link"   href="https://www.youtube.com/watch?v=xuc24_HK90E" >AI will never replace art: Art is feeling, the feeling you, as a person has when you create it, and express it.<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+]]></content>
+      <categories>
+        <category>music</category>
+      </categories>
+      <tags>
+        <tag>EDM</tag>
+        <tag>Producing</tag>
       </tags>
   </entry>
 </search>
