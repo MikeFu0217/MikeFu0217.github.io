@@ -2480,6 +2480,78 @@ html.is-animating .scroll-progress-bar {
   display: flex;
   font-size: 1rem;
 }
+.sidebar-photo-card {
+  margin-top: 22.8px;
+  padding: 6px;
+  border-radius: 18px;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--redefine-box-shadow-flat);
+  overflow: hidden;
+  user-select: none;
+  cursor: zoom-in;
+}
+.sidebar-photo-card .photo-card-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: calc(($redefine-border-radius-large - 4px));
+  transition: opacity 0.25s ease;
+}
+.sidebar-photo-card .photo-card-image.photo-card-fading {
+  opacity: 0;
+}
+.photo-card-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: rgba(0,0,0,0.82);
+  cursor: zoom-out;
+  animation: photoCardLightboxIn 0.18s ease;
+}
+.photo-card-lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+@-moz-keyframes photoCardLightboxIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes photoCardLightboxIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes photoCardLightboxIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes photoCardLightboxIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .sidebar-tag-card {
   margin-top: 22.8px;
   padding: 15px;
