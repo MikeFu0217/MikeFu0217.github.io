@@ -15,15 +15,65 @@
       </tags>
   </entry>
   <entry>
+    <title>[Undergrad Design] MRender - A GPU Displayer for 3D Tomographic Images</title>
+    <url>/2024/06/10/MRender/</url>
+    <content><![CDATA[<p><a class="link"   href="https://github.com/MikeFu0217/MRender" >Github Repository<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>This is a renderer with 3-axis &amp; 3D draggable display. It turns sequential 2D slices into a 3D volume, and allows users to rotate and translate the volume.</p>
+<p>It is built with qt5-C++, using Qt-designer.</p>
+<p>It supports:</p>
+<ul>
+<li>Image importing &amp; saving (PNG, JPEG, BMP)</li>
+<li>3-axis display</li>
+<li>3D draggable display</li>
+<li>Any-direction depth-adjustable perspection (with adjustable alpha-value)</li>
+<li>Synchronized 3D slices for 3-axis and perspective display</li>
+<li>Bounding-box display</li>
+<li>Volume rendering (with adjustable opacity)</li>
+<li>GPU acceleration (NVIDIA CUDA)</li>
+<li>Rendering accuracy adjustment</li>
+<li>Image interpolation (Binary, Linear, Cubic)</li>
+<li>Image segmentation (Threshold)</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/posts/MRender/UI.png"
+                      alt="UI"
+                ></p>
+]]></content>
+      <categories>
+        <category>project</category>
+      </categories>
+      <tags>
+        <tag>Biomedical</tag>
+        <tag>Graphics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[CAMS 2025] gem5 Co-Pilot: AI Assistant Agent for Architectural Design Space Exploration</title>
+    <url>/2025/10/20/gem5-copilot/</url>
+    <content><![CDATA[<p>Presented at the <a class="link"   href="https://sarchlab.org/cams25" >CAMS’25 workshop<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, Micro 2025, Seoul, Korea.</p>
+<p><a class="link"   href="https://arxiv.org/abs/2510.19577" >Arxiv Page<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>Generative AI is increasing the productivity of software and hardware development across many application domains. In this work, we utilize the power of Large Language Models (LLMs) to develop a co-pilot agent for assisting gem5 users with automating design space exploration. Computer architecture design space exploration is complex and time-consuming, given that numerous parameter settings and simulation statistics must be analyzed before improving the current design. The emergence of LLMs has significantly accelerated the analysis of long-text data as well as smart decision making, two key functions in a successful design space exploration task. In this project, we first build gem5 Co-Pilot, an AI agent assistant for gem5, which comes with a webpage-GUI for smooth user interaction, agent automation, and result summarization. We also implemented a language for design space exploration, as well as a Design Space Database (DSDB). With DSDB, gem5 Co-Pilot effectively implements a Retrieval Augmented Generation system for gem5 design space exploration. We experiment on cost-constraint optimization with four cost ranges and compare our results with two baseline models. Results show that gem5 Co-Pilot can quickly identify optimal parameters for specific design constraints based on performance and cost, with limited user interaction.</p>
+]]></content>
+      <categories>
+        <category>paper</category>
+      </categories>
+      <tags>
+        <tag>Computer Architecture</tag>
+        <tag>LLM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LIVE is all you need</title>
     <url>/2026/02/11/live-is-all-u-need/</url>
     <content><![CDATA[<h1 id="This-is-how-I-get-into-Ableton-live"><a href="#This-is-how-I-get-into-Ableton-live" class="headerlink" title="This is how I get into Ableton live!"></a>This is how I get into Ableton live!</h1><p><a class="link"   href="https://www.youtube.com/watch?v=a703fGo9iNE" >Thanks for this impressive video shows so much details in just 30 minutes!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
 <h1 id="Instruments"><a href="#Instruments" class="headerlink" title="Instruments"></a>Instruments</h1><ul>
 <li><p>Drums<br><a class="link"   href="https://www.youtube.com/watch?v=htiSWoH-kTU" >Ableton Drum Rack in Detail<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=mPQdK6c4yhU" >Trance Kick using Kick2<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=VqsQJKJgkEU" >Perfect PsyTrance Kick using Kick2<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=I_4d4U3Ti9k" >Make Your Kick Drum Sound AMAZING Every Time!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
 </li>
-<li><p>Synth<br>Wavetable is the first DAW-naive synth I found elegant, precise, powerful.<br><a class="link"   href="https://www.youtube.com/watch?v=aLOYhVQbhp8" >Treasure Wavetable Crash Course!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=zZW7mgsvAjQ&list=PLYzt2_QLeO9UW63YgwrryCM8mEQLAebRH" >Wavetable Sound Design (Like Anyma) Channel)<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=mvuV9M0NM1k" >Psytrance FM leads w&#x2F; Wavetable<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<li><p>Synth<br>Wavetable is the first DAW-naive synth I found elegant, precise, powerful.<br><a class="link"   href="https://www.youtube.com/watch?v=aLOYhVQbhp8" >Treasure Wavetable Crash Course!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=zZW7mgsvAjQ&list=PLYzt2_QLeO9UW63YgwrryCM8mEQLAebRH" >Wavetable Sound Design (Like Anyma) Channel)<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=mvuV9M0NM1k" >Psytrance FM leads w&#x2F; Wavetable<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a href="https://www.youtube.com/watch?v=RnV5TY05-2w"><br>Meld Synth Explained: The Most Powerful Synth in Ableton 12</a></p>
 </li>
-<li><p>Bass<br><a class="link"   href="https://www.youtube.com/watch?v=Cu6Y2bKTh3M" >Awesome Psy-Trance bass using wavetable!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<li><p>Bass<br><a class="link"   href="https://www.youtube.com/watch?v=Cu6Y2bKTh3M" >Awesome Psy-Trance bass using wavetable!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a href="https://www.youtube.com/watch?v=VzjHd6jrgVQ&t=115s"><br>The Secret Bass Sound of Ferry Corsten’s Trance Classics</a></p>
 </li>
 </ul>
 <p>Alanog, I first new it…<br><a class="link"   href="https://www.youtube.com/results?search_query=ableton+analog" >Ableton Alanog Synthesizer<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
@@ -109,56 +159,6 @@ allowfullscreen>
         <category>project</category>
       </categories>
       <tags>
-        <tag>Graphics</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[CAMS 2025] gem5 Co-Pilot: AI Assistant Agent for Architectural Design Space Exploration</title>
-    <url>/2025/10/20/gem5-copilot/</url>
-    <content><![CDATA[<p>Presented at the <a class="link"   href="https://sarchlab.org/cams25" >CAMS’25 workshop<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, Micro 2025, Seoul, Korea.</p>
-<p><a class="link"   href="https://arxiv.org/abs/2510.19577" >Arxiv Page<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>Generative AI is increasing the productivity of software and hardware development across many application domains. In this work, we utilize the power of Large Language Models (LLMs) to develop a co-pilot agent for assisting gem5 users with automating design space exploration. Computer architecture design space exploration is complex and time-consuming, given that numerous parameter settings and simulation statistics must be analyzed before improving the current design. The emergence of LLMs has significantly accelerated the analysis of long-text data as well as smart decision making, two key functions in a successful design space exploration task. In this project, we first build gem5 Co-Pilot, an AI agent assistant for gem5, which comes with a webpage-GUI for smooth user interaction, agent automation, and result summarization. We also implemented a language for design space exploration, as well as a Design Space Database (DSDB). With DSDB, gem5 Co-Pilot effectively implements a Retrieval Augmented Generation system for gem5 design space exploration. We experiment on cost-constraint optimization with four cost ranges and compare our results with two baseline models. Results show that gem5 Co-Pilot can quickly identify optimal parameters for specific design constraints based on performance and cost, with limited user interaction.</p>
-]]></content>
-      <categories>
-        <category>paper</category>
-      </categories>
-      <tags>
-        <tag>Computer Architecture</tag>
-        <tag>LLM</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Undergrad Design] MRender - A GPU Displayer for 3D Tomographic Images</title>
-    <url>/2024/06/10/MRender/</url>
-    <content><![CDATA[<p><a class="link"   href="https://github.com/MikeFu0217/MRender" >Github Repository<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p>This is a renderer with 3-axis &amp; 3D draggable display. It turns sequential 2D slices into a 3D volume, and allows users to rotate and translate the volume.</p>
-<p>It is built with qt5-C++, using Qt-designer.</p>
-<p>It supports:</p>
-<ul>
-<li>Image importing &amp; saving (PNG, JPEG, BMP)</li>
-<li>3-axis display</li>
-<li>3D draggable display</li>
-<li>Any-direction depth-adjustable perspection (with adjustable alpha-value)</li>
-<li>Synchronized 3D slices for 3-axis and perspective display</li>
-<li>Bounding-box display</li>
-<li>Volume rendering (with adjustable opacity)</li>
-<li>GPU acceleration (NVIDIA CUDA)</li>
-<li>Rendering accuracy adjustment</li>
-<li>Image interpolation (Binary, Linear, Cubic)</li>
-<li>Image segmentation (Threshold)</li>
-</ul>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/posts/MRender/UI.png"
-                      alt="UI"
-                ></p>
-]]></content>
-      <categories>
-        <category>project</category>
-      </categories>
-      <tags>
-        <tag>Biomedical</tag>
         <tag>Graphics</tag>
       </tags>
   </entry>
