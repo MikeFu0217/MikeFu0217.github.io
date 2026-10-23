@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>/2026/07/16/Detail%20the%20Trance-Synth-Shelin/</url>
-    <content><![CDATA[<p>This DETAIL comes from <a class="link"   href="https://www.youtube.com/watch?v=IiEp7WQl6vA" >this wonderful tutorial<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> of using wavetable for trance pluck.</p>
-<p>This post details, explains, and explores how wavetable can make emotional and vivid trance synths.</p>
-<h2 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h2>]]></content>
-  </entry>
-  <entry>
     <title>[Undergrad Design] MRender - A GPU Displayer for 3D Tomographic Images</title>
     <url>/2024/06/10/MRender/</url>
     <content><![CDATA[<p><a class="link"   href="https://github.com/MikeFu0217/MRender" >Github Repository<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
@@ -40,57 +33,6 @@
       <tags>
         <tag>Graphics</tag>
         <tag>Biomedical</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Sensors 2024] Phonocardiogram (PCG) Murmur Detection Based on the Mean Teacher Method</title>
-    <url>/2024/10/15/PCG-mean-teacher/</url>
-    <content><![CDATA[<p>Accepted by <a href="https://www.mdpi.com/1424-8220/24/20/6646"><em>Sensors</em> 2024</a>.</p>
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>Cardiovascular diseases (CVDs) are among the primary causes of mortality globally, highlighting the critical need for early detection to mitigate their impact. Phonocardiograms (PCGs), which record heart sounds, are essential for the non-invasive assessment of cardiac function, enabling the early identification of abnormalities such as murmurs. Particularly in underprivileged regions with high birth rates, the absence of early diagnosis poses a significant public health challenge. In pediatric populations, the analysis of PCG signals is invaluable for detecting abnormal sound waves indicative of congenital and acquired heart diseases, such as septal defects and defective cardiac valves. In the PhysioNet 2022 challenge, the murmur score is a weighted accuracy metric that reflects detection accuracy based on clinical significance. In our research, we proposed a mean teacher method tailored for murmur detection, making full use of the Phyionet2022 and Phyionet2016 PCG datasets, achieving the SOTA (State of Art) performance with a murmur score of 0.82 and an AUC score of 0.90, providing an accessible and high accuracy non-invasive early stage CVD assessment tool, especially for low and middle-income countries (LMICs).</p>
-]]></content>
-      <categories>
-        <category>paper</category>
-      </categories>
-      <tags>
-        <tag>Biomedical</tag>
-        <tag>Deep Learning</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Flows Crate: Turn Your Music Library into a DJ Set</title>
-    <url>//flows-crate/</url>
-    <content><![CDATA[<p><strong>Flows Crate is a native macOS app for organizing music and planning DJ sets.</strong> Start with the performance you want to create, then bring track selection, music metadata, and running order together in one workspace.</p>
-<p>Set your target duration, style, and energy progression. Choose tracks from your library, discover music that fits, and shape them into a set you can take to the decks.</p>
-<span id="more"></span>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/posts/flows-crate/set-studio.png"
-                      alt="Flows Crate Set workspace: sets on the left, track sequencing in the center, and an AI assistant on the right."
-                ></p>
-<p><em>Demo screenshot with fictional tracks. The interface shown is in Chinese; the app is under active development.</em></p>
-<h2 id="From-your-library-to-your-next-set"><a href="#From-your-library-to-your-next-set" class="headerlink" title="From your library to your next set"></a>From your library to your next set</h2><ul>
-<li><strong>Plan around a performance.</strong> Define a target duration, BPM range, and energy curve, then choose tracks that fit your style and feedback.</li>
-<li><strong>Keep track details close.</strong> Edit BPM and musical key directly in the library or a set. Import tracks from screenshots, CSV files, or local audio.</li>
-<li><strong>Refine the running order.</strong> Drag tracks to reorder them, preview sequencing suggestions, keep set versions, and export your tracklist.</li>
-<li><strong>Tap along to the music.</strong> Open the BPM tap pad from a track’s context menu. Use the space bar or mouse to follow the beat, then save the measured tempo.</li>
-<li><strong>Discuss your set with AI.</strong> Explore openings, transitions, and energy changes in the context of your current set. Preview order suggestions or move to Discover to find new tracks.</li>
-</ul>
-<h2 id="BPM-and-musical-key-data"><a href="#BPM-and-musical-key-data" class="headerlink" title="BPM and musical-key data"></a>BPM and musical-key data</h2><p>BPM and musical-key lookup data provided by <strong><a class="link"   href="https://getsongbpm.com/" >GetSongBPM<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></strong>. Online lookup requires a user-configured API key; see the <a class="link"   href="https://getsongbpm.com/api" >GetSongBPM API documentation<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</p>
-<p>Online references retain their sources for review. Remixes, extended mixes, radio edits, and tracks with matching names need careful version checks. Lookup and audio-analysis results are treated as estimates until confirmed.</p>
-<p>Local key analysis uses <a class="link"   href="https://github.com/mixxxdj/libkeyfinder" >libkeyfinder<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, alongside local BPM estimation. Audio analysis runs on your Mac. You can also correct values manually or use the tap pad.</p>
-<h2 id="Availability"><a href="#Availability" class="headerlink" title="Availability"></a>Availability</h2><p>Flows Crate is in active development for <strong>macOS 15 and later</strong>. This page introduces the project and its data sources; a public installer is not yet available.</p>
-<p>AI features require a separately configured service. The current Set assistant supports discussion, ordering suggestions, and discovery guidance; it does not yet execute arbitrary library changes through chat.</p>
-]]></content>
-      <categories>
-        <category>music</category>
-      </categories>
-      <tags>
-        <tag>Flows Crate</tag>
-        <tag>DJ</tag>
-        <tag>macOS</tag>
-        <tag>Music Tools</tag>
       </tags>
   </entry>
   <entry>
@@ -418,6 +360,78 @@
       </tags>
   </entry>
   <entry>
+    <title>Flows Crate: Turn Your Music Library into a DJ Set</title>
+    <url>//flows-crate/</url>
+    <content><![CDATA[<p><strong>Flows Crate is a native macOS app for organizing music and planning DJ sets.</strong> Start with the performance you want to create, then bring track selection, music metadata, and running order together in one workspace.</p>
+<p>Set your target duration, style, and energy progression. Choose tracks from your library, discover music that fits, and shape them into a set you can take to the decks.</p>
+<span id="more"></span>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/posts/flows-crate/set-studio.png"
+                      alt="Flows Crate Set workspace: sets on the left, track sequencing in the center, and an AI assistant on the right."
+                ></p>
+<p><em>Demo screenshot with fictional tracks. The interface shown is in Chinese; the app is under active development.</em></p>
+<h2 id="From-your-library-to-your-next-set"><a href="#From-your-library-to-your-next-set" class="headerlink" title="From your library to your next set"></a>From your library to your next set</h2><ul>
+<li><strong>Plan around a performance.</strong> Define a target duration, BPM range, and energy curve, then choose tracks that fit your style and feedback.</li>
+<li><strong>Keep track details close.</strong> Edit BPM and musical key directly in the library or a set. Import tracks from screenshots, CSV files, or local audio.</li>
+<li><strong>Refine the running order.</strong> Drag tracks to reorder them, preview sequencing suggestions, keep set versions, and export your tracklist.</li>
+<li><strong>Tap along to the music.</strong> Open the BPM tap pad from a track’s context menu. Use the space bar or mouse to follow the beat, then save the measured tempo.</li>
+<li><strong>Discuss your set with AI.</strong> Explore openings, transitions, and energy changes in the context of your current set. Preview order suggestions or move to Discover to find new tracks.</li>
+</ul>
+<h2 id="BPM-and-musical-key-data"><a href="#BPM-and-musical-key-data" class="headerlink" title="BPM and musical-key data"></a>BPM and musical-key data</h2><p>BPM and musical-key lookup data provided by <strong><a class="link"   href="https://getsongbpm.com/" >GetSongBPM<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></strong>. Online lookup requires a user-configured API key; see the <a class="link"   href="https://getsongbpm.com/api" >GetSongBPM API documentation<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</p>
+<p>Online references retain their sources for review. Remixes, extended mixes, radio edits, and tracks with matching names need careful version checks. Lookup and audio-analysis results are treated as estimates until confirmed.</p>
+<p>Local key analysis uses <a class="link"   href="https://github.com/mixxxdj/libkeyfinder" >libkeyfinder<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, alongside local BPM estimation. Audio analysis runs on your Mac. You can also correct values manually or use the tap pad.</p>
+<h2 id="Availability"><a href="#Availability" class="headerlink" title="Availability"></a>Availability</h2><p>Flows Crate is in active development for <strong>macOS 15 and later</strong>. This page introduces the project and its data sources; a public installer is not yet available.</p>
+<p>AI features require a separately configured service. The current Set assistant supports discussion, ordering suggestions, and discovery guidance; it does not yet execute arbitrary library changes through chat.</p>
+]]></content>
+      <categories>
+        <category>music</category>
+      </categories>
+      <tags>
+        <tag>Flows Crate</tag>
+        <tag>DJ</tag>
+        <tag>macOS</tag>
+        <tag>Music Tools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Flows: Code as the Instrument Surface</title>
+    <url>//flows/</url>
+    <content><![CDATA[<p><strong>Build a sound in code. Listen, observe and compare at every step.</strong></p>
+<p>Flows is an experimental, open-source synthesizer I built to explore a simple idea: the code that defines a sound can also be the place where you play and shape it.</p>
+<p><a class="link"   href="https://github.com/flows-audio/flows" >GitHub<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> · <a class="link"   href="https://github.com/flows-audio/flows/releases/latest" >Download the macOS preview<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> · <a class="link"   href="https://conference.audio.dev/session/2026/code-as-the-instrument-surface/" >ADCx Gather talk<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<span id="more"></span>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/posts/flows/interface.png"
+                      alt="Flows showing instrument code, live signal analysis, parameter controls and a piano keyboard."
+                ></p>
+<p><em>A saw oscillator through a lowpass filter, with probes before and after processing.</em></p>
+<p>Drag a value directly in the code and hear the change. Place a <code>probe</code> on an intermediate signal to listen, inspect its waveform or spectrum, and compare stages of the sound. An optional AI assistant can propose edits to that same source for you to review.</p>
+<p>The aim is to make sound design easier to understand: not just hearing the result, but seeing what each operation contributes.</p>
+<h2 id="At-ADCx-Gather"><a href="#At-ADCx-Gather" class="headerlink" title="At ADCx Gather"></a>At ADCx Gather</h2><p>I presented Flows at <strong>ADCx Gather on 16 October 2026</strong>.</p>
+<p><strong>Code as the Instrument Surface</strong></p>
+<p><em>Source-Backed Synthesis for Humans and Agents</em></p>
+<p>The talk follows the connection between source, controls and sound: playing an instrument, inspecting signals, and reviewing an AI-proposed edit within one workspace.</p>
+<p><a class="link"   href="https://conference.audio.dev/session/2026/code-as-the-instrument-surface/" >Read the session introduction<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> · <a class="link"   href="https://conference.audio.dev/speakers/zuoming-fu/" >Speaker profile<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="Try-Flows"><a href="#Try-Flows" class="headerlink" title="Try Flows"></a>Try Flows</h2><p>The project is open source, with a preview available for <strong>Apple Silicon Macs</strong>. It is still evolving; feedback, musical examples and contributions are welcome.</p>
+<p><a class="link"   href="https://github.com/flows-audio/flows" >Explore the repository<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> · <a class="link"   href="https://github.com/flows-audio/flows/releases/latest" >Get the latest release<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+]]></content>
+      <categories>
+        <category>project</category>
+      </categories>
+      <tags>
+        <tag>Flows</tag>
+        <tag>Audio</tag>
+        <tag>Sound Design</tag>
+        <tag>ADCx Gather</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[CAMS 2025] gem5 Co-Pilot: AI Assistant Agent for Architectural Design Space Exploration</title>
     <url>/2025/10/20/gem5-copilot/</url>
     <content><![CDATA[<p>Presented at the <a class="link"   href="https://sarchlab.org/cams25" >CAMS’25 workshop<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, Micro 2025, Seoul, Korea.</p>
@@ -430,37 +444,6 @@
       <tags>
         <tag>LLM</tag>
         <tag>Computer Architecture</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LIVE is all you need</title>
-    <url>/2026/02/11/live-is-all-u-need/</url>
-    <content><![CDATA[<h1 id="This-is-how-I-get-into-Ableton-live"><a href="#This-is-how-I-get-into-Ableton-live" class="headerlink" title="This is how I get into Ableton live!"></a>This is how I get into Ableton live!</h1><p><a class="link"   href="https://www.youtube.com/watch?v=a703fGo9iNE" >Thanks for this impressive video shows so much details in just 30 minutes!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h2 id="Genres"><a href="#Genres" class="headerlink" title="Genres"></a>Genres</h2><h3 id="Trance"><a href="#Trance" class="headerlink" title="Trance"></a>Trance</h3><p><a class="link"   href="https://www.youtube.com/watch?v=VqsQJKJgkEU" >Perfect PsyTrance Kick using Kick2<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=mPQdK6c4yhU" >Trance Kick using Kick2<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=a703fGo9iNE&list=PLP_v_043Lft26eWO6lDspwc054x2hvcpN" >Making a 2026 Trance Banger (30 Minute Challenge!)<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=IiEp7WQl6vA" >Wavetable: Trance-Synth-Shelin<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=qC3s2FYCW00" >Wavetable: Warm Pad Sound<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Tech-House"><a href="#Tech-House" class="headerlink" title="Tech House"></a>Tech House</h3><p><a class="link"   href="https://www.youtube.com/watch?v=cHRkREkccFE" >Tech House Track from Scratch in 1hr - Westend (Ableton)<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=XmVV7S9dVfE" >Tech House Track from Scratch w&#x2F; Fab Massimo | Ableton only<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Techno"><a href="#Techno" class="headerlink" title="Techno"></a>Techno</h3><p><a class="link"   href="https://www.youtube.com/watch?v=Tbvn_cEux3U" >Experimental Techno using Ableton Live<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Ableton-Synths"><a href="#Ableton-Synths" class="headerlink" title="Ableton-Synths"></a>Ableton-Synths</h3><p>Wavetable is the first DAW-naive synth I found elegant, precise, powerful.<br><a class="link"   href="https://www.youtube.com/watch?v=aLOYhVQbhp8" >Treasure Wavetable Crash Course!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=zZW7mgsvAjQ&list=PLYzt2_QLeO9UW63YgwrryCM8mEQLAebRH" >Wavetable Sound Design (Like Anyma) Channel)<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br>Alanog, I first new it…<br><a class="link"   href="https://www.youtube.com/results?search_query=ableton+analog" >Ableton Analog Synthesizer<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=ka4X-Be7TWQ" >Ableton Analog in Complete DETAIL<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br>Meld, ha, quite new!<br><a class="link"   href="https://www.youtube.com/watch?v=RnV5TY05-2w" >Meld Synth Explained: The Most Powerful Synth in Ableton 12<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br>Operator? Sounds like an effect haha.<br><a class="link"   href="https://www.youtube.com/watch?v=Xahbn7OjRF4" >Ableton Operator Instrument<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=RnFh5CrR9zk" >Stop Ignoring Ableton Operator<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Virus-TI-Emulation"><a href="#Virus-TI-Emulation" class="headerlink" title="Virus TI Emulation"></a>Virus TI Emulation</h3><p><a class="link"   href="https://theusualsuspects.io/downloads/ostirus" >OsTIrus — Access Virus TI&#x2F;Snow emulator<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> is an exceptionally faithful software emulation of the Virus TI&#x2F;Snow architecture. It is a great way to explore the Virus’s dense supersaws, trance leads, and evolving pads in a modern DAW; it supports macOS, Windows, and Linux. Bring your own legally obtained Virus TI firmware, and check the installation guide before setting it up.</p>
-<h3 id="Drums"><a href="#Drums" class="headerlink" title="Drums"></a>Drums</h3><p><a class="link"   href="https://www.youtube.com/watch?v=htiSWoH-kTU" >Ableton Drum Rack in Detail<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=I_4d4U3Ti9k" >Make Your Kick Drum Sound AMAZING Every Time!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h2 id="Bass"><a href="#Bass" class="headerlink" title="Bass"></a>Bass</h2><p><a class="link"   href="https://www.youtube.com/watch?v=Cu6Y2bKTh3M" >Awesome Psy-Trance bass using wavetable!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=VzjHd6jrgVQ&t=115s" >The Secret Bass Sound of Ferry Corsten’s Trance Classics<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h2 id="Audio-Effects"><a href="#Audio-Effects" class="headerlink" title="Audio Effects"></a>Audio Effects</h2><ul>
-<li>Gain</li>
-<li>Filter&#x2F;EQ</li>
-<li>Dynamics<br><a class="link"   href="https://www.youtube.com/watch?v=0kxQjMyzSyE" >Getting started with the OTT plug-in (3 tips you need to know)<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li>Non-linearity<br><a class="link"   href="https://www.youtube.com/watch?v=x3RD2-2h8_s" >Ableton Saturator<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li>Time-domain</li>
-<li>Stereo field</li>
-<li>Modulation</li>
-</ul>
-<h2 id="John-Summit"><a href="#John-Summit" class="headerlink" title="John Summit"></a>John Summit</h2><p><a class="link"   href="https://www.youtube.com/watch?v=6eCK7wwSGxY" >How To Make Tech House Like The Pros<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h1 id="Treasures"><a href="#Treasures" class="headerlink" title="Treasures"></a>Treasures</h1><p><a class="link"   href="https://www.youtube.com/watch?v=xuc24_HK90E" >AI will never replace art: Art is feeling, the feeling you, as a person has when you create it, and express it.<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=Sde6uBILhnU" >Why Modern Electronic Music Feels So Hollow<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-]]></content>
-      <categories>
-        <category>music</category>
-      </categories>
-      <tags>
-        <tag>EDM</tag>
-        <tag>Producing</tag>
       </tags>
   </entry>
   <entry>
@@ -510,6 +493,58 @@ allowfullscreen>
       </categories>
       <tags>
         <tag>Graphics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LIVE is all you need</title>
+    <url>/2026/02/11/live-is-all-u-need/</url>
+    <content><![CDATA[<h1 id="This-is-how-I-get-into-Ableton-live"><a href="#This-is-how-I-get-into-Ableton-live" class="headerlink" title="This is how I get into Ableton live!"></a>This is how I get into Ableton live!</h1><p><a class="link"   href="https://www.youtube.com/watch?v=a703fGo9iNE" >Thanks for this impressive video shows so much details in just 30 minutes!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="Genres"><a href="#Genres" class="headerlink" title="Genres"></a>Genres</h2><h3 id="Trance"><a href="#Trance" class="headerlink" title="Trance"></a>Trance</h3><p><a class="link"   href="https://www.youtube.com/watch?v=VqsQJKJgkEU" >Perfect PsyTrance Kick using Kick2<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=mPQdK6c4yhU" >Trance Kick using Kick2<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=a703fGo9iNE&list=PLP_v_043Lft26eWO6lDspwc054x2hvcpN" >Making a 2026 Trance Banger (30 Minute Challenge!)<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=IiEp7WQl6vA" >Wavetable: Trance-Synth-Shelin<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=qC3s2FYCW00" >Wavetable: Warm Pad Sound<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h3 id="Tech-House"><a href="#Tech-House" class="headerlink" title="Tech House"></a>Tech House</h3><p><a class="link"   href="https://www.youtube.com/watch?v=cHRkREkccFE" >Tech House Track from Scratch in 1hr - Westend (Ableton)<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=XmVV7S9dVfE" >Tech House Track from Scratch w&#x2F; Fab Massimo | Ableton only<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h3 id="Techno"><a href="#Techno" class="headerlink" title="Techno"></a>Techno</h3><p><a class="link"   href="https://www.youtube.com/watch?v=Tbvn_cEux3U" >Experimental Techno using Ableton Live<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h3 id="Ableton-Synths"><a href="#Ableton-Synths" class="headerlink" title="Ableton-Synths"></a>Ableton-Synths</h3><p>Wavetable is the first DAW-naive synth I found elegant, precise, powerful.<br><a class="link"   href="https://www.youtube.com/watch?v=aLOYhVQbhp8" >Treasure Wavetable Crash Course!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=zZW7mgsvAjQ&list=PLYzt2_QLeO9UW63YgwrryCM8mEQLAebRH" >Wavetable Sound Design (Like Anyma) Channel)<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br>Alanog, I first new it…<br><a class="link"   href="https://www.youtube.com/results?search_query=ableton+analog" >Ableton Analog Synthesizer<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=ka4X-Be7TWQ" >Ableton Analog in Complete DETAIL<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br>Meld, ha, quite new!<br><a class="link"   href="https://www.youtube.com/watch?v=RnV5TY05-2w" >Meld Synth Explained: The Most Powerful Synth in Ableton 12<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br>Operator? Sounds like an effect haha.<br><a class="link"   href="https://www.youtube.com/watch?v=Xahbn7OjRF4" >Ableton Operator Instrument<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=RnFh5CrR9zk" >Stop Ignoring Ableton Operator<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h3 id="Virus-TI-Emulation"><a href="#Virus-TI-Emulation" class="headerlink" title="Virus TI Emulation"></a>Virus TI Emulation</h3><p><a class="link"   href="https://theusualsuspects.io/downloads/ostirus" >OsTIrus — Access Virus TI&#x2F;Snow emulator<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> is an exceptionally faithful software emulation of the Virus TI&#x2F;Snow architecture. It is a great way to explore the Virus’s dense supersaws, trance leads, and evolving pads in a modern DAW; it supports macOS, Windows, and Linux. Bring your own legally obtained Virus TI firmware, and check the installation guide before setting it up.</p>
+<h3 id="Drums"><a href="#Drums" class="headerlink" title="Drums"></a>Drums</h3><p><a class="link"   href="https://www.youtube.com/watch?v=htiSWoH-kTU" >Ableton Drum Rack in Detail<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=I_4d4U3Ti9k" >Make Your Kick Drum Sound AMAZING Every Time!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="Bass"><a href="#Bass" class="headerlink" title="Bass"></a>Bass</h2><p><a class="link"   href="https://www.youtube.com/watch?v=Cu6Y2bKTh3M" >Awesome Psy-Trance bass using wavetable!<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=VzjHd6jrgVQ&t=115s" >The Secret Bass Sound of Ferry Corsten’s Trance Classics<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="Audio-Effects"><a href="#Audio-Effects" class="headerlink" title="Audio Effects"></a>Audio Effects</h2><ul>
+<li>Gain</li>
+<li>Filter&#x2F;EQ</li>
+<li>Dynamics<br><a class="link"   href="https://www.youtube.com/watch?v=0kxQjMyzSyE" >Getting started with the OTT plug-in (3 tips you need to know)<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li>Non-linearity<br><a class="link"   href="https://www.youtube.com/watch?v=x3RD2-2h8_s" >Ableton Saturator<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li>Time-domain</li>
+<li>Stereo field</li>
+<li>Modulation</li>
+</ul>
+<h2 id="John-Summit"><a href="#John-Summit" class="headerlink" title="John Summit"></a>John Summit</h2><p><a class="link"   href="https://www.youtube.com/watch?v=6eCK7wwSGxY" >How To Make Tech House Like The Pros<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h1 id="Treasures"><a href="#Treasures" class="headerlink" title="Treasures"></a>Treasures</h1><p><a class="link"   href="https://www.youtube.com/watch?v=xuc24_HK90E" >AI will never replace art: Art is feeling, the feeling you, as a person has when you create it, and express it.<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   href="https://www.youtube.com/watch?v=Sde6uBILhnU" >Why Modern Electronic Music Feels So Hollow<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+]]></content>
+      <categories>
+        <category>music</category>
+      </categories>
+      <tags>
+        <tag>EDM</tag>
+        <tag>Producing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2026/07/16/Detail%20the%20Trance-Synth-Shelin/</url>
+    <content><![CDATA[<p>This DETAIL comes from <a class="link"   href="https://www.youtube.com/watch?v=IiEp7WQl6vA" >this wonderful tutorial<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> of using wavetable for trance pluck.</p>
+<p>This post details, explains, and explores how wavetable can make emotional and vivid trance synths.</p>
+<h2 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h2>]]></content>
+  </entry>
+  <entry>
+    <title>[Sensors 2024] Phonocardiogram (PCG) Murmur Detection Based on the Mean Teacher Method</title>
+    <url>/2024/10/15/PCG-mean-teacher/</url>
+    <content><![CDATA[<p>Accepted by <a href="https://www.mdpi.com/1424-8220/24/20/6646"><em>Sensors</em> 2024</a>.</p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>Cardiovascular diseases (CVDs) are among the primary causes of mortality globally, highlighting the critical need for early detection to mitigate their impact. Phonocardiograms (PCGs), which record heart sounds, are essential for the non-invasive assessment of cardiac function, enabling the early identification of abnormalities such as murmurs. Particularly in underprivileged regions with high birth rates, the absence of early diagnosis poses a significant public health challenge. In pediatric populations, the analysis of PCG signals is invaluable for detecting abnormal sound waves indicative of congenital and acquired heart diseases, such as septal defects and defective cardiac valves. In the PhysioNet 2022 challenge, the murmur score is a weighted accuracy metric that reflects detection accuracy based on clinical significance. In our research, we proposed a mean teacher method tailored for murmur detection, making full use of the Phyionet2022 and Phyionet2016 PCG datasets, achieving the SOTA (State of Art) performance with a murmur score of 0.82 and an AUC score of 0.90, providing an accessible and high accuracy non-invasive early stage CVD assessment tool, especially for low and middle-income countries (LMICs).</p>
+]]></content>
+      <categories>
+        <category>paper</category>
+      </categories>
+      <tags>
+        <tag>Biomedical</tag>
+        <tag>Deep Learning</tag>
       </tags>
   </entry>
 </search>
