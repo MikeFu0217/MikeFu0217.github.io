@@ -1,0 +1,1 @@
+var e=new Set,t=0;function n(n){t=0;let r=e;e=new Set;for(let e of r)e.read?.(n);for(let e of r)e.write?.(n)}var r=(e,t)=>1-(1-e)**(t/(1e3/60));function i(r){e.add(r),t||=requestAnimationFrame(n)}export{r as n,i as t};
